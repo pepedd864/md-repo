@@ -7,7 +7,7 @@
 - ESP32是乐鑫公司推出的一款微处理器
 - ESP32使用40nm工艺、双核32位MCU、主频高达230MHz2.4GHz双模Wi-Fi和蓝牙4.0芯片
 - 具有丰富的外设接口: GPIO、ADC、DAC、SPI、I2C、I2S、UART
-- 可以使用多种语言进行开发:c, C++, python, javascript等，新手建议使用python或Arduino ide开发
+- 可以使用多种语言进行开发:C, C++, python, javascript等，新手建议使用python或Arduino ide开发
 - 物联网项目的理想选择
 
 <img src="https://gitee.com/pepedd864/cdn-repos/raw/master/img/8ca85aa553ac0212e9a639f1944e4cbe.png" style="zoom:67%;" />
