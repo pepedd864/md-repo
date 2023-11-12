@@ -156,7 +156,7 @@ fs.readFile('1.txt','utf-8',function(err,dataStr){  //此处注意读入字符�
   - 使用绝对路径
   - 使用`__dirname`进行拼接
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/62f6404e182c67f11a790a8b5166113c.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/62f6404e182c67f11a790a8b5166113c.png)
 
 
 
@@ -496,7 +496,7 @@ const moment = require('moment')
 
 在每个`.js`自定义模块中都有一个`module`对象，它里面**存储了和当前模块有关的信息**
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/04a0cdd3fb87e1d448f6b4d0951d1b6e.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/04a0cdd3fb87e1d448f6b4d0951d1b6e.png)
 
 ### 5.5.2 module.exports对象
 

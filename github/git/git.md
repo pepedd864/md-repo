@@ -34,11 +34,11 @@ git是一个开源的分布式版本控制系统，可以有效、高速地处�
 - 完全分布式
 - 有能力高效管理类似 Linux内核一样的超大规模项目（速度和数据量)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/fe2d2f4b89747d5fca560161b6a83668.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/fe2d2f4b89747d5fca560161b6a83668.png)
 
 ## 3. git工作流程
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/30ccc95fbe8880fe766abc6e94359725.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/30ccc95fbe8880fe766abc6e94359725.png)
 
 命令如下
 
@@ -110,7 +110,7 @@ export LC_ALL="zh_CN.UTF-8"
 
 ## 2.4 git常用指令
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/34cad4cc1b61f466690395d7b5ba8d4f.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/34cad4cc1b61f466690395d7b5ba8d4f.png)
 
 ### 2.4.1 查看修改的状态(status)
 
@@ -223,7 +223,7 @@ git branch -D b1不做任何检查，强制删除
 从master派生的分支，一般作为线上bug修复使用，修复完成后需要合并到master、test、develop分支
 - 还有一些其他分支，例如test分支(用于代码测试)、pre分支(预上线分支)等等
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/cd706b6fecfea47722cf0a3db13dc940.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/cd706b6fecfea47722cf0a3db13dc940.png)
 
 # 4. git远程仓库
 
@@ -235,7 +235,7 @@ git branch -D b1不做任何检查，强制删除
 
 ## 4.1 创建仓库
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/6ee9c06fc81a46d62f6d842717d53644.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/6ee9c06fc81a46d62f6d842717d53644.png)
 
 ## 4.2 配置ssh公钥
 
@@ -253,7 +253,7 @@ git branch -D b1不做任何检查，强制删除
 cat ~/.ssh/id_rsa.pub	
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/4e95f666806abb0697489996bf519ed7.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/4e95f666806abb0697489996bf519ed7.png)
 
 - 
   - 验证是否配置成功
@@ -266,7 +266,7 @@ ssh -T git@gitee.com
 
 1. 复制仓库地址
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/993cf73e90068bc07464e45ac1e028de.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/993cf73e90068bc07464e45ac1e028de.png)
 
 2. 指定本地仓库的远程仓库`git remote add <远端名称> <仓库路径>`
    - 远端名称，默认是origin，取决于远端服务器设置
@@ -321,7 +321,7 @@ git remote
 
 A用户在本地修改代码后优先推送到远程仓库，此时B用户在本地修订代码，提交到本地仓库后，也需要推送到远程仓库，此时B用户晚于A用户，**故需要先拉取远程仓库的提交，经过合并后才能推送到远端分支**,如下图所示。
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/4420d82e1f1c2d5defc10bcd1ed58b6b.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/4420d82e1f1c2d5defc10bcd1ed58b6b.png)
 
 在B用户拉取代码时，因为A、B用户同一段时间修改了同一个文件的相同位置代码，故会发生合并冲突。
 
@@ -329,16 +329,131 @@ A用户在本地修改代码后优先推送到远程仓库，此时B用户在本
 
 ## 4.5 通过VSCode提交远程仓库
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/c4cea441fa4fdda2e53a38ee695fab46.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/c4cea441fa4fdda2e53a38ee695fab46.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/f674361e6a81e02acda553e87d262409.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/f674361e6a81e02acda553e87d262409.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/12139140593b385937494672f407372f.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/12139140593b385937494672f407372f.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/f999a13f9a30c4af28bfe3ec3231fb38.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/f999a13f9a30c4af28bfe3ec3231fb38.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/09d49932e48119ca82d63c7a26e2f32a.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/09d49932e48119ca82d63c7a26e2f32a.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/c8cafd2dee0a384f6dd1682e90695472.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/c8cafd2dee0a384f6dd1682e90695472.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/60addb4d58d098bb0d34e99b9a4785ff.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/60addb4d58d098bb0d34e99b9a4785ff.png)
+
+
+
+# 5. commit规范-约定式规范
+
+官网：https://www.conventionalcommits.org/zh-hans/v1.0.0/
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/51464fa2c7de20eecdf4057d6ced1eb3.png)
+
+**commit message格式**
+
+```text
+<type>(<scope>): <subject>
+```
+
+**type(必须)**
+
+用于说明git commit的类别，只允许使用下面的标识。
+
+feat：新功能（feature）。
+
+fix/to：修复bug，可以是QA发现的BUG，也可以是研发自己发现的BUG。
+
+- fix：产生diff并自动修复此问题。适合于一次提交直接修复问题
+- to：只产生diff不自动修复此问题。适合于多次提交。最终修复问题提交时使用fix
+
+docs：文档（documentation）。
+
+style：格式（不影响代码运行的变动）。
+
+refactor：重构（即不是新增功能，也不是修改bug的代码变动）。
+
+perf：优化相关，比如提升性能、体验。
+
+test：增加测试。
+
+chore：构建过程或辅助工具的变动。
+
+revert：回滚到上一个版本。
+
+merge：代码合并。
+
+sync：同步主线或分支的Bug。
+
+**scope(可选)**
+
+scope用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。
+
+例如在Angular，可以是location，browser，compile，compile，rootScope， ngHref，ngClick，ngView等。如果你的修改影响了不止一个scope，你可以使用*代替。
+
+**subject(必须)**
+
+subject是commit目的的简短描述，不超过50个字符。
+
+建议使用中文（感觉中国人用中文描述问题能更清楚一些）。
+
+- 结尾不加句号或其他标点符号。
+- 根据以上规范git commit message将是如下的格式：
+
+```text
+fix(DAO):用户查询缺少username属性 
+feat(Controller):用户查询接口开发
+```
+
+
+
+# 6. git进阶用法
+
+## 6.1 filter-repo
+
+filter-repo是git官方指定的历史记录重写和过滤操作工具，它可以用于各种场景，包括：
+
+1. 仓库裁剪：当你想要从一个Git仓库中提取出特定的目录或文件时，`git filter-repo`可以帮助你快速创建一个新的仓库，只包含你感兴趣的部分。这对于从大型仓库中提取子项目或者将仓库拆分为更小的模块非常有用。
+2. 敏感数据删除：当你在Git仓库中不小心提交了包含敏感信息的文件（如密码、API密钥等），你可以使用`git filter-repo`来完全删除这些敏感数据的历史记录，以确保不会再有人能够访问到这些信息。
+3. 历史记录重写：`git filter-repo`提供了强大的历史记录重写功能，可以帮助你修改提交的内容、合并提交、修改提交顺序等。这对于修复错误、重新组织提交历史或准备干净的发布版本非常有用。
+4. 仓库转换：如果你想要将一个Git仓库转换为另一种版本控制系统（如Mercurial），或者将一个仓库迁移到另一个托管平台（如从GitHub迁移到GitLab），`git filter-repo`可以帮助你转换和重构仓库的历史记录，以满足目标系统的要求。
+
+安装
+
+```bash
+pip install git-filter-repo
+```
+
+删除文件或文件夹
+
+```bash
+git filter-repo --path <file or folder> --invert-paths
+```
+
+
+
+## 6.2 sparse clone
+
+使用`sparse`系列命令可以让你在从一个大型git仓库中下载特定文件或者文件夹时得心应手
+
+> 使用sparse clone 命令可以下载仓库的元数据，然后根据需要下载文件或文件夹
+
+```bash
+# 下载元数据
+git clone --filter=blob:none --sparse https://github.com/pepedd864/code-repo.git
+```
+
+> 使用sparse checkout命令，下载特定的文件或文件夹
+
+```bash
+# 下载文件夹
+git sparse-checkout add login-crud
+```
+
+> 如果你不需要这个文件夹了，还可以使用set命令切换到另一个文件夹
+
+```bash
+git sparse-checkout set antdv-theme-mgr
+```
+

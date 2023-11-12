@@ -1,5 +1,3 @@
-# scrcpy
-
 ## 1. 介绍
 
 **scrcpy(screen copy)**是一个通过提供 USB 或 TCP/IP 连接的 Android设备显示和控制的工具。它不需要任何根访问权限。它可以在 GNU/Linux、 Windows 和 macOS 上运行。

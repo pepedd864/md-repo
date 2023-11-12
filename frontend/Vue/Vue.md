@@ -409,13 +409,13 @@ vue框架的特性，主要体现在如下两方面:
 
 **注意:**数据驱动视图是**单向的数据绑定**.
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/8fc00411c84018604b2cddbbd5210878.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/8fc00411c84018604b2cddbbd5210878.png)
 
 ### 2.2.2 双向数据绑定
 
 在**填写表单**时，双向数据绑定可以辅助开发者在**不操作DOM的前提下**，**自动**把用户填写的内容**同步到**数据源中。示意图如下:
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/0b1741068c2984567fc91914b0c3134b.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/0b1741068c2984567fc91914b0c3134b.png)
 
 **好处:**开发者不再需要手动操作`DOM`元素，来获取表单元素最新的值!
 
@@ -423,7 +423,7 @@ vue框架的特性，主要体现在如下两方面:
 
 `MWVM`是`vue`实现数据驱动视图和双向数据绑定的核心原理。`MVVM`指的是 `Model、View和ViewModel`,它把每个`HTML`页面都拆分成了这三个部分，如图所示:
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/1ee97402e7110aaa46a4188a8cf9a6b2.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/1ee97402e7110aaa46a4188a8cf9a6b2.png)
 
 **在MVVM概念中:**
 
@@ -437,7 +437,7 @@ vue框架的特性，主要体现在如下两方面:
 
 **`ViewModel`作为`MVVM`的核心**，是它把当前页面的**数据源**(`Model`)和**页面的结构**(`View`)连接在了一起.
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/0920e916c17c4e60e64e86c731ef3d54.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/0920e916c17c4e60e64e86c731ef3d54.png)
 
 - 当**数据源发生变化**时，会被`ViewModel`监听到，`VM`会根据最新的数据源**自动更新**页面的结构
 - 当**表单元素的值发生变化**时，也会被`VM`监听到，`VM`会把变化过后最新的值**自动同步**到`Model`数据源中
@@ -487,7 +487,7 @@ vue框架的特性，主要体现在如下两方面:
 
 ## 3.1 基本代码和MVVM的对应关系
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/ef974afcdbcc7fbff34b1b8c1555d866.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/ef974afcdbcc7fbff34b1b8c1555d866.png)
 
 ## 3.2 Vue的指令与过滤器
 
@@ -1146,7 +1146,7 @@ props:{
 
 - 是指一个组件从**创建**->**运行**-→**销毁**的整个阶段，**强调的是一个时间段**.
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/6f2c97f045ba988851b02056c01c8d62.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/6f2c97f045ba988851b02056c01c8d62.png)
 
 **Init Event & Lifecycle**
 
@@ -1991,81 +1991,482 @@ router.beforeEach((to,from，next) =>{
 })
 ```
 
-# 5. Vue3简介
+# 5. Vue3的基本使用
 
-## 5.1 Vue3.x和Vue2.x的对比
+## 5.1 Vue3简介
 
-`vue2.x`中绝大多数的`API`与特性，在`vue3.x`中同样支持。同时，`vue3.x`中还新增了3.x所特有的功能、并废弃了某些2.x中的旧功能:
+### 5.1.1 Vue2 选项式 API vs Vue3 组合式API
 
-**新增的功能例如:**
-
-- 组合式`API`
-
-- 多根节点组件
-- 更好的`TypeScript`支持等
-
-**废弃的旧功能如下:**
-过滤器、不再支持`$on`,`$off `和`$once`实例方法等
-
-**详细的变更信息，请参考官方文档给出的迁移指南:**
-https://v3.vuejs.org/guide/migration/introduction.html
-
-## 5.2 选项式API和组合式API
-
-在`Vue2.x`的学习笔记中使用的均为**选项式API风格**
-
-**选项式 API**
-
-使用**选项式 API**，我们可以用包含多个选项的对象来描述组件的逻辑，例如 `data`、`methods` 和 `mounted`。选项所定义的属性都会暴露在函数内部的 `this` 上，它会指向当前的组件实例.
-
-```html
+```vue
 <script>
 export default {
-  data() {
+  data(){
     return {
-      count: 0
+      count:0
     }
   },
-  methods: {
-    increment() {
+  methods:{
+    addCount(){
       this.count++
     }
-  },
-  mounted() {
-    console.log(`The initial count is ${this.count}.`)
   }
 }
 </script>
 ```
 
-**组合式API**
-
-通过组合式 API，我们可以使用导入的 API 函数来描述组件逻辑。在单文件组件中，组合式 API 通常会与`<script setup>`搭配使用。这个 `setup` attribute 是一个标识，告诉 Vue 需要在编译时进行一些处理，让我们可以更简洁地使用组合式 API。比如，`<script setup>` 中的导入和顶层变量/函数都能够在模板中直接使用.
-
-```html
+```vue
 <script setup>
-import {ref, onMounted } from 'vue'
+import { ref } from 'vue'
 const count = ref(0)
-function increment() {
-  count.value++
-}
-onMounted(() => {
-  console.log(`The initial count is ${count.value}.`)
+const addCount = ()=> count.value++
+</script>
+```
+
+特点：
+
+1. 代码量变少
+2. 分散式维护变成集中式维护
+
+### 5.1.2 Vue3的优势
+
+![image.png](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/45e91aa7a51227ff45d9653028c23971.png)
+
+
+## 5.2 使用create-vue搭建Vue3项目
+
+### 5.2.1 认识create-vue
+
+> create-vue是Vue官方新的脚手架工具，底层切换到了 vite （下一代前端工具链），为开发提供极速响应
+
+
+![image.png](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/e91c376b2ff65ca5fc57593251f39f30.png)
+
+### 5.2.2 使用create-vue创建项目
+
+> 前置条件 - 已安装16.0或更高版本的Node.js
+
+执行如下命令，这一指令将会安装并执行 create-vue
+
+```bash
+npm init vue@latest
+```
+
+![image.png](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/74654c9ee3d38e17e33aa97a83021e4c.png)
+
+**熟悉项目和关键文件**
+
+![image.png](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/5e0bec6ffd21fb7adc986d8580a9d038.png)
+
+## 5.3 setup选项
+
+### 5.3.1 setup选项的写法和执行时机
+
+写法
+
+```vue
+<script>
+  export default {
+    setup(){
+      
+    },
+    beforeCreate(){
+      
+    }
+  }
+</script>
+```
+
+执行时机
+
+> 在beforeCreate钩子之前执行
+
+![image.png](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/71f1c5b592f31b298712af1b7a2e76c2.png)
+
+### 5.3.2 setup中写代码的特点
+
+> 在setup函数中写的数据和方法需要在末尾以对象的方式return，才能给模版使用
+
+```vue
+<script>
+  export default {
+    setup(){
+      const message = 'this is message'
+      const logMessage = ()=>{
+        console.log(message)
+      }
+      // 必须return才可以
+      return {
+        message,
+        logMessage
+      }
+    }
+  }
+</script>
+```
+
+### 5.3.3 `<script setup>`语法糖
+
+> script标签添加 setup标记，不需要再写导出语句，默认会添加导出语句
+
+```vue
+<script setup>
+  const message = 'this is message'
+  const logMessage = ()=>{
+    console.log(message)
+  }
+</script>
+```
+
+## 5.4 reactive和ref函数
+
+### 5.4.1 reactive
+
+> 接受对象类型数据的参数传入并返回一个响应式的对象
+
+
+```vue
+<script setup>
+ // 导入
+ import { reactive } from 'vue'
+ // 执行函数 传入参数 变量接收
+ const state = reactive({
+   msg:'this is msg'
+ })
+ const setSate = ()=>{
+   // 修改数据更新视图
+   state.msg = 'this is new msg'
+ }
+</script>
+
+<template>
+  {{ state.msg }}
+  <button @click="setState">change msg</button>
+</template>
+```
+
+### 5.4.2 ref
+
+> 接收简单类型或者对象类型的数据传入并返回一个响应式的对象
+
+```vue
+<script setup>
+ // 导入
+ import { ref } from 'vue'
+ // 执行函数 传入参数 变量接收
+ const count = ref(0)
+ const setCount = ()=>{
+   // 修改数据更新视图必须加上.value
+   count.value++
+ }
+</script>
+
+<template>
+  <button @click="setCount">{{count}}</button>
+</template>
+```
+
+### 5.4.3 reactive 对比 ref
+
+1. 都是用来生成响应式数据
+2. 不同点
+   1. reactive不能处理简单类型的数据
+   2. ref参数类型支持更好，但是必须通过.value做访问修改
+   3. ref函数内部的实现依赖于reactive函数
+3. 在实际工作中的推荐
+   1. 推荐使用ref函数，减少记忆负担，小兔鲜项目都使用ref
+
+## 5.5 computed
+
+> 计算属性基本思想和Vue2保持一致，组合式API下的计算属性只是修改了API写法
+
+```vue
+<script setup>
+// 导入
+import {ref, computed } from 'vue'
+// 原始数据
+const count = ref(0)
+// 计算属性
+const doubleCount = computed(()=>count.value * 2)
+
+// 原始数据
+const list = ref([1,2,3,4,5,6,7,8])
+// 计算属性list
+const filterList = computed(item=>item > 2)
+</script>
+```
+
+## 5.6 watch
+
+> 侦听一个或者多个数据的变化，数据变化时执行回调函数，俩个额外参数 immediate控制立刻执行，deep开启深度侦听
+
+### 5.6.1 侦听单个数据
+
+```vue
+<script setup>
+  // 1. 导入watch
+  import { ref, watch } from 'vue'
+  const count = ref(0)
+  // 2. 调用watch 侦听变化
+  watch(count, (newValue, oldValue)=>{
+    console.log(`count发生了变化，老值为${oldValue},新值为${newValue}`)
+  })
+</script>
+```
+
+### 5.6.2 侦听多个数据
+
+> 侦听多个数据，第一个参数可以改写成数组的写法
+
+```vue
+<script setup>
+  // 1. 导入watch
+  import { ref, watch } from 'vue'
+  const count = ref(0)
+  const name = ref('cp')
+  // 2. 调用watch 侦听变化
+  watch([count, name], ([newCount, newName],[oldCount,oldName])=>{
+    console.log(`count或者name变化了，[newCount, newName],[oldCount,oldName])
+  })
+</script>
+```
+
+### 5.6.3 immediate
+
+> 在侦听器创建时立即出发回调，响应式数据变化之后继续执行回调
+
+
+```vue
+<script setup>
+  // 1. 导入watch
+  import { ref, watch } from 'vue'
+  const count = ref(0)
+  // 2. 调用watch 侦听变化
+  watch(count, (newValue, oldValue)=>{
+    console.log(`count发生了变化，老值为${oldValue},新值为${newValue}`)
+  },{
+    immediate: true
+  })
+</script>
+```
+
+### 5.6.4 deep
+
+> 通过watch监听的ref对象默认是浅层侦听的，直接修改嵌套的对象属性不会触发回调执行，需要开启deep
+
+```vue
+<script setup>
+  // 1. 导入watch
+  import { ref, watch } from 'vue'
+  const state = ref({ count: 0 })
+  // 2. 监听对象state
+  watch(state, ()=>{
+    console.log('数据变化了')
+  })
+  const changeStateByCount = ()=>{
+    // 直接修改不会引发回调执行
+    state.value.count++
+  }
+</script>
+
+<script setup>
+  // 1. 导入watch
+  import { ref, watch } from 'vue'
+  const state = ref({ count: 0 })
+  // 2. 监听对象state 并开启deep
+  watch(state, ()=>{
+    console.log('数据变化了')
+  },{deep:true})
+  const changeStateByCount = ()=>{
+    // 此时修改可以触发回调
+    state.value.count++
+  }
+</script>
+
+```
+
+## 5.7 生命周期函数
+
+### 5.7.1 选项式对比组合式
+
+![image.png](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/69e8540ab521605001fbc81704131b5e.png)
+
+### 5.7.2 生命周期函数基本使用
+
+> 1. 导入生命周期函数
+> 2. 执行生命周期函数，传入回调
+
+```vue
+<scirpt setup>
+import { onMounted } from 'vue'
+onMounted(()=>{
+  // 自定义逻辑
 })
 </script>
 ```
 
-**区别:**
+### 5.7.3 执行多次
 
-- 它们只是同一个底层系统所提供的两套不同的接口
-- 选项式 API 是在组合式 API 的基础上实现的
-- 选项式 API 以“组件实例”的概念为中心 (即上述例子中的 `this`)
-- 组合式 API 的核心思想是直接在函数作用域内定义响应式状态变量，并将从多个函数中得到的状态组合起来处理复杂问题
+> 生命周期函数执行多次的时候，会按照顺序依次执行
 
-**在项目中:**
+```vue
+<scirpt setup>
+import { onMounted } from 'vue'
+onMounted(()=>{
+  // 自定义逻辑
+})
 
-- 当你不需要使用构建工具，或者打算主要在低复杂度的场景中使用 Vue，例如渐进增强的应用场景，推荐采用选项式 API。
-- 当你打算用 Vue 构建完整的单页应用，推荐采用组合式 API + 单文件组件。
+onMounted(()=>{
+  // 自定义逻辑
+})
+</script>
+```
+
+## 5.8 父子通信
+
+### 5.8.1 父传子
+
+> 基本思想
+>
+> 1. 父组件中给子组件绑定属性
+> 2. 子组件内部通过props选项接收数据
+
+
+![image.png](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/cb1e912e7c10f63eb32b0bea5b0a5a85.png)
+
+### 5.8.2 子传父
+
+> 基本思想
+>
+> 1. 父组件中给子组件标签通过@绑定事件
+> 2. 子组件内部通过 emit 方法触发事件
+
+
+![image.png](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/95e3e98902b7987abd38baee0a3767a2.png)
+
+## 5.9 模版引用
+
+> 概念：通过 ref标识 获取真实的 dom对象或者组件实例对象
+
+### 5.9.1 基本使用
+
+> 实现步骤：
+>
+> 1. 调用ref函数生成一个ref对象
+> 2. 通过ref标识绑定ref对象到标签
+
+![image.png](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/cb05d1ec0f30c38e3f3263f1abf762be.png)
+
+### 5.9.2 defineExpose
+
+> 默认情况下在 <script setup>语法糖下组件内部的属性和方法是不开放给父组件访问的，可以通过defineExpose编译宏指定哪些属性和方法容许访问
+> 说明：指定testMessage属性可以被访问到
+
+![image.png](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/27467ae3eaa6bab3390a8f0e0291c9ad.png)
+
+## 5.10 provide和inject
+
+### 5.10.1 作用和场景
+
+> 顶层组件向任意的底层组件传递数据和方法，实现跨层组件通信
+
+![image.png](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/9f0047abfb9505d8b0c5cd13d9feb584.png)
+
+### 5.10.2 跨层传递普通数据
+
+> 实现步骤
+>
+> 1. 顶层组件通过 `provide` 函数提供数据
+> 2. 底层组件通过 `inject` 函数提供数据
+
+
+![image.png](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/baf6fe8d9964878505ff95184e8a84c4.png)
+
+### 5.10.3 跨层传递响应式数据
+
+> 在调用provide函数时，第二个参数设置为ref对象
+
+![image.png](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/d9cf74da03ebcb9d155e2a98dd2c0140.png)
+
+### 5.10.4 跨层传递方法
+
+> 顶层组件可以向底层组件传递方法，底层组件调用方法修改顶层组件的数据
+
+![image.png](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/19c4902f8bfa51deb01fddfeee39849a.png)
+
+
+
+## 5.11. Vue3.3 新特性-defineOptions
+
+背景说明：
+
+有 `<script setup> `之前，如果要定义 `props`, `emits`可以轻而易举地添加一个与`setup` 平级的属性。 
+
+但是用了 `<script setup>` 后，就没法这么干了 `setup `属性已经没有了，自然无法添加与其平级的属性。
+
+---
+
+为了解决这一问题，引入了 `defineProps` 与 `defineEmits` 这两个宏。但这只解决了 `props` 与 `emits` 这两个属性。
+
+如果我们要定义组件的 `name` 或其他自定义的属性，还是得回到最原始的用法——再添加一个普通的 `<script>` 标签。
+
+这样就会存在两个 `<script>` 标签。让人无法接受。
+
+---
+
+所以在 Vue 3.3 中新引入了 `defineOptions` 宏。顾名思义，主要是用来定义 `Options API` 的选项。可以用 `defineOptions` 定义任意的选项， `props`, `emits`,` expose`, `slots `除外（因为这些可以使用 defineXXX 来做到）
+
+![image-20230704082955748](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/57a6fb7aa92fa319fff2776d4bddc06d.png)
+
+
+
+
+
+## 5.12 Vue3.3新特性-defineModel
+
+在Vue3中，自定义组件上使用`v-model`, 相当于传递一个`modelValue`属性，同时触发 `update:modelValue` 事件
+
+![image-20230704083027349](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/ff87f3b41c38db4ceafaad7f9c29083c.png)
+
+我们需要先定义 `props`，再定义 `emits` 。其中有许多重复的代码。如果需要修改此值，还需要手动调用 `emit` 函数。
+
+于是乎 `defineModel `诞生了。
+
+![image-20230704083056549](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/e71e4f09969bea834ffc10796d413566.png)
+
+
+
+生效需要配置 vite.config.js
+
+```jsx
+import { fileURLToPath, URL } from 'node:url'
+
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    vue({
+      script: {
+        defineModel: true
+      }
+    }),
+  ],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  }
+})
+```
+
+
+
+
+
+
+
+
 
 # 6. 单页面应用程序(SPA)
 
@@ -2319,7 +2720,7 @@ methods:{
 
 **拦截器**（英文: Interceptors）会在**每次发起ajax请求和得到响应**的时候自动被触发。
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/f8ce14173b79a510f80888f597713ad3.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/f8ce14173b79a510f80888f597713ad3.png)
 
 ## 9.3 配置请求拦截器
 
@@ -2393,13 +2794,13 @@ axios.interceptors.response.use(function (response) {
 
 由于当前的API接口**没有开启CORS**跨域资源共享，因此默认情况下，上面的接口**无法请求成功**!
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/a75956df43c63e6e24d0d23af52cc696.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/a75956df43c63e6e24d0d23af52cc696.png)
 
 ## 10.2 通过代理解决
 
 通过`vue-cli`创建的项目在遇到接口跨域问题时，可以通过**代理**的方式来解决:
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/003c04bd35be607832602d497abd985b.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/003c04bd35be607832602d497abd985b.png)
 
 1. 把axios 的**请求根路径**设置为**vue项目的运行地址**（接口请求不再跨域)
 
@@ -2435,7 +2836,11 @@ module.exports = {
 
 Vuex是实现组件全局状态（数据)管理的一种机制，可以方便的实现组件之间数据的共享。
 
-![9](https://gitee.com/pepedd864/cdn-repos/raw/master/img/c25e7b066b4a55331b91dfd5199b33d3.png)
+**在最新的vue3中，全局状态管理工具已经替换为了pinia，不再推荐使用vuex**
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/13747ef7c0dc2a546f89afe4cb92f0b8.png)
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/c25e7b066b4a55331b91dfd5199b33d3.png)
 
 使用vuex统一管理状态的好处
 
@@ -2661,7 +3066,7 @@ computed: {
 
 ## 11.4 案例--Todos
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/d72fda73d39d2a186c3e2ca8187cc1e7.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/d72fda73d39d2a186c3e2ca8187cc1e7.png)
 
 ### 11.4.1 初始化项目
 
@@ -2680,7 +3085,7 @@ npm i eslint less -D
 
 3. 配置项目
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/7fa82e70053d862296fa67b53ecacd58.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/7fa82e70053d862296fa67b53ecacd58.png)
 
 ```js
 // prettierrc.js
@@ -3416,3 +3821,567 @@ const scopedSlots = {
 }
 ```
 
+
+
+# 14. pinia
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/f2d82f5cb5a935483f4b01882bf92639.png)
+
+前言 全局状态管理工具
+
+[Pinia](https://so.csdn.net/so/search?q=Pinia&spm=1001.2101.3001.7020) 有如下特点：
+
+- 完整的 ts 的支持；
+- 足够轻量，压缩后的体积只有1kb左右;
+- 去除 mutations，只有 state，getters，actions；
+- actions 支持同步和异步；
+- 代码扁平化没有模块嵌套，只有 store 的概念，store 之间可以自由使用，每一个store都是独立的
+- 无需手动添加 store，store 一旦创建便会自动添加；
+- 支持Vue3 和 Vue2
+
+官方文档[Pinia](https://pinia.vuejs.org/)
+
+git 地址 https://github.com/vuejs/pinia
+
+## 14.1 安装入门
+
+1. 安装
+
+```bash
+yarn add pinia
+or
+npm install pinia
+```
+
+2. 引入pinia
+
+```js
+import { createApp } from 'vue'
+import App from './App.vue'
+import {createPinia} from 'pinia'
+ 
+const store = createPinia()
+let app = createApp(App)
+ 
+ 
+app.use(store)
+ 
+app.mount('#app')
+```
+
+3. 新建一个文件夹Store
+4. 新建[name].js文件(name可以是一个实体对象，如user)
+5. 编写代码
+
+```js
+// stores/counter.js
+import { defineStore } from 'pinia'
+
+export const useCounterStore = defineStore('counter', {
+  state: () => {
+    return { count: 0 }
+  },
+  // 也可以这样定义
+  // state: () => ({ count: 0 })
+  actions: {
+    increment() {
+      this.count++
+    },
+  },
+})
+```
+
+6. 然后你就可以在一个组件中使用该 store 了
+
+```vue
+<script setup>
+import { useCounterStore } from '@/stores/counter'
+const counter = useCounterStore()
+counter.count++
+// 自动补全！ ✨
+counter.$patch({ count: counter.count + 1 })
+// 或使用 action 代替
+counter.increment()
+</script>
+<template>
+  <!-- 直接从 store 中访问 state -->
+  <div>Current Count: {{ counter.count }}</div>
+</template>
+```
+
+7. 为实现更多高级用法，你甚至可以使用一个函数 (与组件 `setup()` 类似) 来定义一个 Store
+
+```js
+export const useCounterStore = defineStore('counter', () => {
+  const count = ref(0)
+  function increment() {
+    count.value++
+  }
+
+  return { count, increment }
+})
+```
+
+
+
+## 14.2 state
+
+pinia的state支持以下特性
+
+- State 是允许直接修改值的
+- 批量修改state的值
+- 批量修改，函数形式
+- 通过原始对象修改整个实例
+
+
+
+1. State 是允许直接修改值的 例如current++
+
+```vue
+<template>
+     <div>
+         <button @click="Add">+</button>
+          <div>
+             {{Test.current}}
+          </div>
+     </div>
+</template>
+ 
+<script setup lang='ts'>
+import {useTestStore} from './store'
+const Test = useTestStore()
+const Add = () => {
+    Test.current++
+}
+ 
+</script>
+ 
+<style>
+ 
+</style>
+```
+
+2. 批量修改state的值
+
+在他的实例上有$patch方法可以批量修改多个值
+
+```vue
+<template>
+     <div>
+         <button @click="Add">+</button>
+          <div>
+             {{Test.current}}
+          </div>
+          <div>
+            {{Test.age}}
+          </div>
+     </div>
+</template>
+ 
+<script setup lang='ts'>
+import {useTestStore} from './store'
+const Test = useTestStore()
+const Add = () => {
+    Test.$patch({
+       current:200,
+       age:300
+    })
+}
+ 
+</script>
+ 
+<style>
+ 
+</style>
+```
+
+3. 批量修改，函数形式
+
+推荐使用函数形式 可以自定义修改逻辑
+
+```vue
+<template>
+     <div>
+         <button @click="Add">+</button>
+          <div>
+             {{Test.current}}
+          </div>
+          <div>
+            {{Test.age}}
+          </div>
+     </div>
+</template>
+ 
+<script setup lang='ts'>
+import {useTestStore} from './store'
+const Test = useTestStore()
+const Add = () => {
+    Test.$patch((state)=>{
+       state.current++;
+       state.age = 40
+    })
+}
+ 
+</script>
+ 
+<style>
+ 
+</style>
+```
+
+4. 通过原始对象修改整个实例
+
+`$state`您可以通过将store的属性设置为新对象来替换store的整个状态
+
+缺点就是必须修改整个对象的所有属性
+
+```vue
+<template>
+     <div>
+         <button @click="Add">+</button>
+          <div>
+             {{Test.current}}
+          </div>
+          <div>
+            {{Test.age}}
+          </div>
+     </div>
+</template>
+ 
+<script setup lang='ts'>
+import {useTestStore} from './store'
+const Test = useTestStore()
+const Add = () => {
+    Test.$state = {
+       current:10,
+       age:30
+    }    
+}
+ 
+</script>
+ 
+<style>
+ 
+</style>
+```
+
+5. 通过actions修改
+
+定义Actions
+
+在actions 中直接使用this就可以指到state里面的值
+
+```js
+import { defineStore } from 'pinia'
+export const useTestStore = defineStore('test', {
+     state:()=>{
+         return {
+            current:1,
+            age:30
+         }
+     },
+ 
+     actions:{
+         setCurrent () {
+             this.current++
+         }
+     }
+})
+```
+
+使用方法直接在实例调用
+
+```vue
+<template>
+     <div>
+         <button @click="Add">+</button>
+          <div>
+             {{Test.current}}
+          </div>
+          <div>
+            {{Test.age}}
+          </div>
+     </div>
+</template>
+ 
+<script setup lang='ts'>
+import {useTestStore} from './store'
+const Test = useTestStore()
+const Add = () => {
+     Test.setCurrent()
+}
+ 
+</script>
+ 
+<style>
+ 
+</style>
+```
+
+
+
+## 14.3 解构store
+
+在pinia是不允许直接解构，解构会使pinia失去响应性的
+
+```js
+const Test = useTestStore()
+ 
+ 
+const { current, name } = Test
+ 
+console.log(current, name);
+```
+
+解决方案可以使用 `storeToRefs`
+
+```js
+import { storeToRefs } from 'pinia'
+ 
+const Test = useTestStore()
+ 
+const { current, name } = storeToRefs(Test)
+```
+
+
+
+## 14.4 Actions
+
+支持同步异步
+
+1. 同步，直接调用即可
+
+```js
+import { defineStore } from 'pinia'
+
+export const useTestStore = defineStore('test', {
+    state: () => ({
+        counter: 0,
+    }),
+    actions: {
+        increment() {
+            this.counter++
+        },
+        randomizeCounter() {
+            this.counter = Math.round(100 * Math.random())
+        },
+    },
+})
+```
+
+```vue
+<template>
+     <div>
+         <button @click="Add">+</button>
+          <div>
+             {{Test.counter}}
+          </div>    
+     </div>
+</template>
+ 
+<script setup lang='ts'>
+import {useTestStore} from './store'
+const Test = useTestStore()
+const Add = () => {
+     Test.randomizeCounter()
+}
+ 
+</script>
+ 
+<style>
+ 
+</style>
+```
+
+2. 异步 可以结合`async` `await`修饰
+
+```js
+import { defineStore } from 'pinia'
+ 
+const Login = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({
+                name: '小满',
+                isChu: true
+            })
+        }, 3000)
+    })
+}
+ 
+export const useTestStore = defineStore('test', {
+    state: () => ({
+        user: {},
+        name: "123"
+    }),
+    actions: {
+        async getLoginInfo() {
+            const result = await Login()
+            this.user = result;
+        }
+    },
+})
+```
+
+```vue
+<template>
+     <div>
+         <button @click="Add">test</button>
+          <div>
+             {{Test.user}}
+          </div>    
+     </div>
+</template>
+ 
+<script setup lang='ts'>
+import {useTestStore} from './store'
+const Test = useTestStore()
+const Add = () => {
+     Test.getLoginInfo()
+}
+ 
+</script>
+ 
+<style>
+ 
+</style>
+```
+
+3. 多个action互相调用`getLoginInfo` `setName`
+
+```js
+state: () => ({
+    user: <Result>{},
+    name: "default"
+}),
+actions: {
+    async getLoginInfo() {
+        const result = await Login()
+        this.user = result;
+        this.setName(result.name)
+    },
+    setName (name:string) {
+        this.name = name;
+    }
+},
+```
+
+
+
+## 14.5 getters
+
+1. 使用箭头函数不能使用`this`  `this`指向已经改变指向`undefined` 修改值请用`state`
+
+主要作用类似于`computed` 数据修饰并且有缓存
+
+```js
+getters:{
+   newPrice:(state)=>  `$${state.user.price}`
+},
+```
+
+2. 普通函数形式可以使用`this`
+
+```js
+getters:{
+   newCurrent () {
+       return ++this.current
+   }
+},
+```
+
+3. `getters` 互相调用
+
+```js
+getters:{
+   newCurrent () {
+       return ++this.current + this.newName
+   },
+   newName () {
+       return `$-${this.name}`
+   }
+},
+```
+
+
+
+## 14.6 API
+
+1. $reset，重置`store`到他的初始状态
+
+2. 订阅state的改变
+
+类似于Vuex 的abscribe 只要有state 的变化就会走这个函数
+
+```js
+Test.$subscribe((args,state)=>{
+   console.log(args,state);
+   
+})
+```
+
+第二个参数
+
+如果你的组件卸载之后还想继续调用请设置第二个参数
+
+```js
+Test.$subscribe((args,state)=>{
+   console.log(args,state);
+   
+},{
+  detached:true
+})
+```
+
+3. 订阅Actions的调用
+
+ 只要有actions被调用就会走这个函数
+
+```js
+Test.$onAction((args)=>{
+   console.log(args);
+   
+})
+```
+
+
+
+## 14.7 持久化
+
+Pinia持久化插件
+
+官方文档：https://prazdevs.github.io/pinia-plugin-persistedstate/zh/
+
+1. 安装插件 pinia-plugin-persistedstate
+
+```bash
+npm i pinia-plugin-persistedstate
+```
+
+2. 使用 main.js
+
+```js
+import persist from 'pinia-plugin-persistedstate'
+...
+app.use(createPinia().use(persist))
+```
+
+3. 配置 store/counter.js
+
+```js
+import { defineStore } from 'pinia'
+import { computed, ref } from 'vue'
+
+export const useCounterStore = defineStore('counter', () => {
+  ...
+  return {
+    count,
+    doubleCount,
+    increment
+  }
+}, {
+  persist: true
+})
+```
+
+4. 其他配置，看官网文档即可

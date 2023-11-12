@@ -9,11 +9,11 @@ Maven是专门用于管理和构建Java项目的工具，它的主要功能有:
 
 
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/376ddac0de9942af3b483a4bf115b21d.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/376ddac0de9942af3b483a4bf115b21d.png)
 
 
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/83f30a20830592c2dc8b7f5fed2c4c1b.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/83f30a20830592c2dc8b7f5fed2c4c1b.png)
 
 ## 1. 简介
 
@@ -26,7 +26,7 @@ Apache Maven
 
 Maven模型
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/e6dfc96d88cb2e7b2269b5ed2ce5c224.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/e6dfc96d88cb2e7b2269b5ed2ce5c224.png)
 
 
 
@@ -42,7 +42,7 @@ Maven模型
 - 如果有，则征项目直接引用;
 - 如果没有，则去中央仓库中下载对应的jar包到本地仓库。
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/56f15f245d562ee811d7b748e298d595.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/56f15f245d562ee811d7b748e298d595.png)
 
 ## 2. 安装配置
 
@@ -121,7 +121,7 @@ Maven对项目构建的生命周期划分为3套
 
 从MavenWeb开发中的项目到部署的JavaWeb项目结构
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/16bf470cd207d1481a1a8804ec98146b.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/16bf470cd207d1481a1a8804ec98146b.png)
 
 编译后的Java字节码文件和resources的资源文件，放到WEB-INF下的classes目录下
 
@@ -139,15 +139,15 @@ pom.xml中依赖坐标对应的jar包，放入WEB-INF下的lib目录下
 4. 填写组ID，和版本
 5. 创建
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/5c4c2484bf699e71999c352800b3d293.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/5c4c2484bf699e71999c352800b3d293.png)
 
 6. 删除pom.xml中多余的坐标
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/803debfa56b0e20ea8d6b9577ef0ccf1.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/803debfa56b0e20ea8d6b9577ef0ccf1.png)
 
 7. 补全目录
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/ddb5afc11a71ad56e4e76cef6223ad92.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/ddb5afc11a71ad56e4e76cef6223ad92.png)
 
 
 
@@ -159,15 +159,15 @@ pom.xml中依赖坐标对应的jar包，放入WEB-INF下的lib目录下
 4. 不要添加示例代码
 5. 填写组ID
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/ee69a109f08b49fd94f317c2d8aba668.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/ee69a109f08b49fd94f317c2d8aba668.png)
 
 6. 在项目结构-->Facet-->Web资源目录下点击目录-->创建Web资源目录
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/321a8b0089f628961f10411f3b570987.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/321a8b0089f628961f10411f3b570987.png)
 
 7. 继续点击部署描述符下的添加-->添加web.xml
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/171b48185addf0e7f81776d3a1367cbc.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/171b48185addf0e7f81776d3a1367cbc.png)
 
 8. 补齐目录
 

@@ -1,5 +1,3 @@
-# Manim
-
 Manim是youtube数学视频频道3b1b作者Grant Sanderson用于制作视频的动画引擎，在GitHub上他这样描述这个引擎
 
 > Manim是一个用于精确编程动画的引擎，旨在创建解释性的数学视频。
@@ -37,7 +35,7 @@ pip install -e .
 
 此时完成了manim的安装
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/aa492027999d5d5499da2c138006776f.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/aa492027999d5d5499da2c138006776f.png)
 
 运行命令
 
@@ -45,7 +43,7 @@ pip install -e .
 manimgl example_scenes.py OpeningManimExample
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/e1321e9b9abffafe0209e69c9f9ee0e2.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/e1321e9b9abffafe0209e69c9f9ee0e2.png)
 
 正常情况下，弹出的窗口在屏幕右上方，并且标题栏溢出屏幕外，无法调整位置，所以需要在项目下配置窗口位置。
 
@@ -53,7 +51,7 @@ manimgl example_scenes.py OpeningManimExample
 
 找到`window_position`，默认为UR，要使窗口位于屏幕中间则改为OO
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/2b2555f65cf2b80b46334c5b54574185.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/2b2555f65cf2b80b46334c5b54574185.png)
 
 
 
@@ -113,7 +111,7 @@ manimgl start.py SquareToCircle
 
 正常运行结果
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/14d793874588bfd9dcff24c4d42e4464.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/14d793874588bfd9dcff24c4d42e4464.png)
 
 修改代码如下
 
@@ -135,7 +133,7 @@ class SquareToCircle(Scene):
 
 你将得到两个文件夹`/images`和`/videos`，里面存放了渲染好的视频和图片
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/f89378813c5e039649a4f9e22784754b.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/f89378813c5e039649a4f9e22784754b.png)
 
 **manimgl新版本支持交互新特性（在pip工具安装的manimlib中没有此特性，故运行时会报错）**，在上面代码末尾加上如下代码启用交互
 
@@ -147,7 +145,7 @@ self.embed()
 
 动画运行完毕后，终端显示如下
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/411efddfd8ce6da0e61713a8e48fad4a.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/411efddfd8ce6da0e61713a8e48fad4a.png)
 
 此时在终端可以输入代码，逐行运行
 
@@ -166,6 +164,6 @@ play(circle.animate.apply_complex_function(lambda z: z**2))
 exit()
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/90c4fa64a86b8ca57520009a855641ab.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/90c4fa64a86b8ca57520009a855641ab.png)
 
 到这里manim的基本使用就介绍完毕，更多内容参考中文文档https://docs.manim.org.cn/index.html

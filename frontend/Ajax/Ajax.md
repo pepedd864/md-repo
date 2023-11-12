@@ -20,7 +20,7 @@
 - 存有该资源的**服务器名称**
 - 资源在服务器上**具体的存放位置**
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/a5a73de848546bbcaa742fbdc6ec2f25.png)
+![](Ajax/assets/a5a73de848546bbcaa742fbdc6ec2f25.png)
 
 # 3. 网页请求数据
 
@@ -28,7 +28,7 @@
 
 - 数据,也是服务器对外提供的一种资源.只要是资源,必然要通过**请求-处理–响应**的方式进行获取.
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/8c29ecc8e5caa592899228ebb87e1914.png)
+![](Ajax/assets/8c29ecc8e5caa592899228ebb87e1914.png)
 
 - 如果要在网页中请求服务器上的数据资源，则需要用到`XMLHttpRequest`对象.
 - `XMLHttpReques`(简称`xhr`)是浏览器提供的`js`成员，通过它，可以请求服务器上的数据资源.
@@ -155,11 +155,11 @@ $(function () {
 
 ### 5.2.1 通过GET方式请求
 
- ![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/2204f766e0d43a637698917fe59707e0.png)
+ ![](Ajax/assets/2204f766e0d43a637698917fe59707e0.png)
 
 ### 5.2.2 通过POST方式请求
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/235098ee15108b425c7277ee78a59b0b.png)
+![](Ajax/assets/235098ee15108b425c7277ee78a59b0b.png)
 
 ### 5.2.3 接口测试工具
 
@@ -175,7 +175,7 @@ $(function () {
 
 ### 5.2.4 使用PostMan测试GET接口
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/d4a54e32e9cce0e131b757e3763e3989.png)
+![](Ajax/assets/d4a54e32e9cce0e131b757e3763e3989.png)
 
 ### 5.2.5 接口文档
 

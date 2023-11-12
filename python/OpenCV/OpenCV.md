@@ -1,5 +1,3 @@
-# OpenCV
-
 ## 1. OpenCV 基础
 
 ### 1.1 OpenCV 简介
@@ -55,7 +53,7 @@ pip install opencv-contrib-python==3.4.2.17
 
 下面是OpenCV中的各个模块:
 
-![](https://cdn.staticaly.com/gh/pepedd864/cdn-repos@main/img/7cba39c78d94ae0fd9cc53873880166b.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/7cba39c78d94ae0fd9cc53873880166b.png)
 
 其中`core`、`highgui`、`imgproc`是最基础的模块
 

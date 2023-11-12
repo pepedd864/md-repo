@@ -24,7 +24,7 @@ Spring Framework
 
 Spring Framework系统框架
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/1e7c394368be6addec9c7c524579369a.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/1e7c394368be6addec9c7c524579369a.png)
 
 
 
@@ -79,15 +79,15 @@ Spring Framework系统框架
 1. 创建Javaweb项目，创建BookDao，BookSerive接口及其实现类
 2. 导入Spring-context
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/ed77a2c2e315e4740ce9cb4dc4913fe2.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/ed77a2c2e315e4740ce9cb4dc4913fe2.png)
 
 3. 创建Spring配置文件，配置Bean
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/c503a3b1b4caae4cf1d6adfbe98d2e3f.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/c503a3b1b4caae4cf1d6adfbe98d2e3f.png)
 
 4. 在app中获取bean对象
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/bdc6beaa5a9abb05d23fd5b9366cfadd.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/bdc6beaa5a9abb05d23fd5b9366cfadd.png)
 
 
 
@@ -105,11 +105,11 @@ Spring Framework系统框架
 
 1. 删除使用new形式创建对象的代码，提供对应的`setter`方法
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/cd6532a3203510c77b03a5bc0e99c096.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/cd6532a3203510c77b03a5bc0e99c096.png)
 
 2. 配置servicce与dao之间的关系
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/e492c33a045889f020b4495f68127f67.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/e492c33a045889f020b4495f68127f67.png)
 
 ## 2. XML配置
 
@@ -117,11 +117,11 @@ Spring Framework系统框架
 
 #### 2.1.1 bean的基础配置
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/e8e91f37bf7b0dbe6d4cc670b9a6f46e.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/e8e91f37bf7b0dbe6d4cc670b9a6f46e.png)
 
 #### 2.1.2 bean的作用范围配置
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/d9dd3ea36fef74f1c593eeb2564c0006.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/d9dd3ea36fef74f1c593eeb2564c0006.png)
 
 bean默认为单例，需要手动设置"scope=prototype"来设置非单例bean
 
@@ -1010,7 +1010,7 @@ public class JdbcConfig {
 
 ### 3.7 XML配置对比注解配置
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/998d3bba80bad77c83ca289b8f52176f.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/998d3bba80bad77c83ca289b8f52176f.png)
 
 ## 4. Spring整合MyBatis、JUnit
 
@@ -1136,7 +1136,7 @@ public class BookServiceTest {
 
 ### 5.1 AOP 核心概念
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/5c882dd0ef8ba409b965d515cc8b32d8.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/5c882dd0ef8ba409b965d515cc8b32d8.png)
 
 - 连接点 ( JoinPoint )︰程序执行过程中的任意位置，粒度为执行方法、抛出异常、设置变量等
   - 在SpringAOP中，理解为方法的执行
@@ -1482,7 +1482,7 @@ public Object around(ProceedingJoinPoint pjp) throws Throwable {
 
 需求:对百度网盘分享链接输入密码时尾部多输入的空格做兼容处理
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/62fb3439056ccc940133e87ea17f28fa.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/62fb3439056ccc940133e87ea17f28fa.png)
 
 分析:
 
@@ -1577,7 +1577,7 @@ public PlatformTransactionManager transactionManager(DataSource dataSource){
 - 事务管理员︰发起事务方，在Spring中通常指代业务层开启事务的方法
 - 事务协调员︰加入事务方，在Spring中通常指代数据层方法，也可以是业务层方法
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/11275c119d949de126b588b2e51aaef3.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/11275c119d949de126b588b2e51aaef3.png)
 
 ### 6.4 事务相关配置
 
@@ -1597,11 +1597,11 @@ public PlatformTransactionManager transactionManager(DataSource dataSource){
 
 - 事务协调员对事务管理员所携带事务的处理态度
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/1c2df486a8edf0e9f8c289bb7dc3ddf7.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/1c2df486a8edf0e9f8c289bb7dc3ddf7.png)
 
 
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/1189a249e077cc1d210ec6250d6ed07b.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/1189a249e077cc1d210ec6250d6ed07b.png)
 
 
 
@@ -1708,7 +1708,7 @@ public class ServletContainersInitConfig extends AbstractDispatcherServletInitia
 5. 加载`UserController`，每个`@RequestMapping`的名称对应一个具体的方法
 6. 执行`getServletMappings`方法，定义所有的请求都通过`SpringMVC`
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/8a15245aee2749f500acb5da4fa685d9.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/8a15245aee2749f500acb5da4fa685d9.png)
 
 单次请求过程
 
@@ -2225,7 +2225,7 @@ public class ProjectExceptionAdvice {
 
 执行流程
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/29c8e02ccfaccf0a0909ffaf033499e8.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/29c8e02ccfaccf0a0909ffaf033499e8.png)
 
 ### 5.2 拦截器与过滤器区别
 
@@ -2459,7 +2459,7 @@ public void afterCompletion(HttpServletRequest request,
 - 作用∶使用聚合工程可以将多个工程编组，通过对聚合工程进行构建，实现对所包含的模块进行同步构建
   - 当工程中某个模块发生更新(变更)时，必须保障工程中与已更新模块关联的模块同步更新，此时可以使用聚合工程来解决批量模块同步构建的问题
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/b6e89af56f25e72af757cab0aa41c949.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/b6e89af56f25e72af757cab0aa41c949.png)
 
 聚合工程开发
 
@@ -2662,7 +2662,7 @@ jdbc.password=root
 
 多环境开发
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/d1c7d17ff597cb22417c92190bc69eca.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/d1c7d17ff597cb22417c92190bc69eca.png)
 
 - maven提供配置多种环境的设定，帮助开发者使用过程中快速切换环境
 
@@ -2717,7 +2717,7 @@ mvn install -D skipTests
 
 ## 6. 私服
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/1d13dbce6d660b981d10bf8bb84475c8.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/1d13dbce6d660b981d10bf8bb84475c8.png)
 
 ### 6.1 私服简介
 
@@ -2752,27 +2752,27 @@ mvn install -D skipTests
 
 1. 创建工程
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/4f0f5e15ff39abf6d6644df0d174ac0a.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/4f0f5e15ff39abf6d6644df0d174ac0a.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/793d7956aceb206f4f48ef098258f4b5.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/793d7956aceb206f4f48ef098258f4b5.png)
 
 2. 删除不必要文件
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/0920002c61df552b7bfc64d1d8fd2207.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/0920002c61df552b7bfc64d1d8fd2207.png)
 
 3. 修改java版本
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/efcf23453e9c5c39c021f20c0bdb4c08.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/efcf23453e9c5c39c021f20c0bdb4c08.png)
 
 4. 创建BookController，编写代码
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/1c70b3401c4ac18fe1abb5d05864b885.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/1c70b3401c4ac18fe1abb5d05864b885.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/eeb12aed22f17e7c80e987dfe9cae451.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/eeb12aed22f17e7c80e987dfe9cae451.png)
 
 5. 运行项目
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/b282c685bfcbe815f329fa6b2f4e13bd.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/b282c685bfcbe815f329fa6b2f4e13bd.png)
 
 ---
 
@@ -2818,7 +2818,7 @@ java -jar springboot.jar
 
 - 起步依赖
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/d0e10510e5c1cb1bcc06f81137167f51.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/d0e10510e5c1cb1bcc06f81137167f51.png)
 
 - starter
   - SpringBoot中常见项目名称，定义了当前项目使用的所有项目坐标,
@@ -2836,7 +2836,7 @@ java -jar springboot.jar
 
 - 使用maven依赖管理变更起步依赖项
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/369ca41349648777a5555b45e20ef136.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/369ca41349648777a5555b45e20ef136.png)
 
 - Jetty比Tomcat更轻量级，可扩展性更强（相较于Tomcat )，谷歌应用引擎（GAE)已经全面切换为Jetty
 
@@ -2844,9 +2844,9 @@ java -jar springboot.jar
 
 springboot最新版本(已知>2.5.14)存在某些问题，比如使用`Autowired`自动填充在运行时会报错，使用低版本即可
 
-![image-20230315190435298](https://gitee.com/pepedd864/cdn-repos/raw/master/img/1ee9b83f299d890891e05783759ba3cb.png)
+![image-20230315190435298](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/1ee9b83f299d890891e05783759ba3cb.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/c3c595e48bc781c40b57009a8b4c7b10.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/c3c595e48bc781c40b57009a8b4c7b10.png)
 
 ## 2. 基础配置
 
@@ -2927,23 +2927,23 @@ YAML文件扩展名
 
 - 使用`@Value`读取单个数据，属性名引用方式:`${一级属性名.二级属性名....}`
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/84cf1def01bb5bf82ca860699d3f7247.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/84cf1def01bb5bf82ca860699d3f7247.png)
 
 - 封装全部数据到Environment对象
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/deb00da1fd6f3e2ea0454c269f427ac4.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/deb00da1fd6f3e2ea0454c269f427ac4.png)
 
 - 自定义类封装指定数据
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/2ad4dc4e918550c15293620714671689.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/2ad4dc4e918550c15293620714671689.png)
 
 ### 2.3 多环境开发
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/6976b2c0b1f7cbd526d679576d67a9ab.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/6976b2c0b1f7cbd526d679576d67a9ab.png)
 
 多环境启动
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/97472bb369d9be3f48be6560d9260ed7.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/97472bb369d9be3f48be6560d9260ed7.png)
 
 多环境启动命令格式
 
@@ -3105,11 +3105,11 @@ spring:
 
 2. 修改启动类的名称(可选)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/340fb490a72834bfb8e4ce77907f93c3.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/340fb490a72834bfb8e4ce77907f93c3.png)
 
 3. 修改配置文件名称(可选)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/872c44a265976709b95484bef49fa8dc.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/872c44a265976709b95484bef49fa8dc.png)
 
 4. 编写配置
 
@@ -3205,7 +3205,7 @@ public class BookMapperTestCase {
 
 - 使用mybatisplus内置的插入方法会出现报错，原因是mybatisplus默认使用了雪花算法生成id报错
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/81ad657fbd37a0a5100369c102dfa03b.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/81ad657fbd37a0a5100369c102dfa03b.png)
 
 - 解决方法，添加id配置为auto
 
@@ -3354,7 +3354,7 @@ public class BookServiceTestCase {
 - 在通用类基础上做功能重载或功能追加
 - 注意重载时不要覆盖原始操作，避免原始提供的功能丢失
 
-<img src="https://gitee.com/pepedd864/cdn-repos/raw/master/img/0057bd6b9cb653174bbc4633d2405068.png" style="zoom:67%;" />
+<img src="https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/0057bd6b9cb653174bbc4633d2405068.png" style="zoom:67%;" />
 
 ```java
 // 接口
@@ -3669,7 +3669,7 @@ public Result getBook(Book book) throws IOException {
 mvn package
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/9c3df3829484c676f19e0c89b0e9075f.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/9c3df3829484c676f19e0c89b0e9075f.png)
 
 2. 运行项目
 
@@ -3876,9 +3876,9 @@ logging:
 
 ### 6.2 自动热部署
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/3e5b76b68695149e60a51e5a0a34d837.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/3e5b76b68695149e60a51e5a0a34d837.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/07c5ff794f4437edf5f606936824e93a.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/07c5ff794f4437edf5f606936824e93a.png)
 
 注意
 
@@ -3907,35 +3907,35 @@ spring:
 
 1. 在idea上下载JRebel插件
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/aaa0d9f65a3106332930bb77a537df8c.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/aaa0d9f65a3106332930bb77a537df8c.png)
 
 2. 激活插件
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/6d377ce0e3d23fad613c754e0221f093.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/6d377ce0e3d23fad613c754e0221f093.png)
 
 3. 下载本地激活服务器[下载](https://github.com/ilanyu/ReverseProxy/releases/tag/v1.4)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/02c557a26b6ccf4ae50c04e60e06de6e.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/02c557a26b6ccf4ae50c04e60e06de6e.png)
 
 4. 运行服务器
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/5c03b058404c4c811c1b6e6d236808bb.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/5c03b058404c4c811c1b6e6d236808bb.png)
 
 5. [生成GUID](https://www.guidgen.com/)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/9c63b1f85f611a184180ae3615996f6f.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/9c63b1f85f611a184180ae3615996f6f.png)
 
 6. 激活
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/9d5dbbec21710a97e7a6b5d9c31383b6.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/9d5dbbec21710a97e7a6b5d9c31383b6.png)
 
 7. 设置为离线
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/34ddc1dc9cc073715977d5187afc58b7.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/34ddc1dc9cc073715977d5187afc58b7.png)
 
 8. 以JRebel运行
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/c70b952540e2952c67f687b36ee987fd.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/c70b952540e2952c67f687b36ee987fd.png)
 
 9. 修改代码，按`Ctrl+F9`重新构建，JRebel会自动部署
 
@@ -4294,4 +4294,294 @@ System.out.println(maps);
 ```
 
 #### 2.4.4 查询条件设置
+
+
+
+# SpringBoot进阶
+
+## 1. Bean 管理
+
+### 1.1 获取Bean
+
+默认情况下，SpringBoot项目在启动的时候会自动的创建IOC容器(也称为Spring容器)，并且在启动的过程当中会自动的将bean对象都创建好，存放在IOC容器当中。应用程序在运行时需要依赖什么bean对象，就直接进行依赖注入就可以了。
+
+而在Spring容器中提供了一些方法，可以主动从IOC容器中获取到bean对象，下面介绍3种常用方式：
+
+1. 根据name获取bean
+
+   ~~~java
+   Object getBean(String name)
+   ~~~
+
+2. 根据类型获取bean
+
+   ~~~java
+   <T> T getBean(Class<T> requiredType)
+   ~~~
+
+3. 根据name获取bean（带类型转换）
+
+   ~~~java
+   <T> T getBean(String name, Class<T> requiredType)
+   ~~~
+
+### 1.2 Bean的作用域
+
+在前面我们提到的IOC容器当中，默认bean对象是单例模式(只有一个实例对象)。那么如何设置bean对象为非单例呢？需要设置bean的作用域。
+
+在Spring中支持五种作用域，后三种在web环境才生效：
+
+| **作用域**  | **说明**                                        |
+| ----------- | ----------------------------------------------- |
+| singleton   | 容器内同名称的bean只有一个实例（单例）（默认）  |
+| prototype   | 每次使用该bean时会创建新的实例（非单例）        |
+| request     | 每个请求范围内会创建新的实例（web环境中，了解） |
+| session     | 每个会话范围内会创建新的实例（web环境中，了解） |
+| application | 每个应用范围内会创建新的实例（web环境中，了解） |
+
+知道了bean的5种作用域了，我们要怎么去设置一个bean的作用域呢？
+
+- 可以借助Spring中的@Scope注解来进行配置作用域
+
+```java
+@Scope("prototype")
+@RestController
+@RequestMapper("/depts")
+public class DetpController {
+    
+}
+```
+
+延迟加载
+
+```java
+@Lazy //延迟加载（第一次使用bean对象时，才会创建bean对象并交给ioc容器管理）
+```
+
+
+
+### 1.3 第三方Bean
+
+之前我们所配置的bean，像controller、service，dao三层体系下编写的类，这些类都是我们在项目当中自己定义的类(自定义类)。当我们要声明这些bean，也非常简单，我们只需要在类上加上@Component以及它的这三个衍生注解（@Controller、@Service、@Repository），就可以来声明这个bean对象了。
+但是在我们项目开发当中，还有一种情况就是这个类它不是我们自己编写的，而是我们引入的第三方依赖当中提供的。
+
+
+
+在pom.xml文件中，引入dom4j：
+
+~~~xml
+<!--Dom4j-->
+<dependency>
+    <groupId>org.dom4j</groupId>
+    <artifactId>dom4j</artifactId>
+    <version>2.1.3</version>
+</dependency>
+~~~
+
+> dom4j就是第三方组织提供的。 dom4j中的SAXReader类就是第三方编写的。
+
+
+
+当我们需要使用到SAXReader对象时，直接进行依赖注入是不是就可以了呢？
+
+- 按照我们之前的做法，需要在SAXReader类上添加一个注解@Component（将当前类交给IOC容器管理）
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/37f8bdfc8b63bcaaacd9369e2454bb27.png)
+
+> 结论：第三方提供的类是只读的。无法在第三方类上添加@Component注解或衍生注解。
+
+那么我们应该怎样使用并定义第三方的bean呢？
+
+- 如果要管理的bean对象来自于第三方（不是自定义的），是无法用@Component 及衍生注解声明bean的，就需要用到**@Bean**注解。
+
+**解决方案1：在启动类上添加@Bean标识的方法**
+
+```java
+@SpringBootApplication
+public class SpringbootWebConfig2Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootWebConfig2Application.class, args);
+    }
+
+    //声明第三方bean
+    @Bean //将当前方法的返回值对象交给IOC容器管理, 成为IOC容器bean
+    public SAXReader saxReader(){
+        return new SAXReader();
+    }
+}
+
+```
+
+**解决方案2：在配置类中定义@Bean标识的方法**
+
+- 如果需要定义第三方Bean时， 通常会单独定义一个配置类
+
+```java
+@Configuration //配置类  (在配置类当中对第三方bean进行集中的配置管理)
+public class CommonConfig {
+
+    //声明第三方bean
+    @Bean //将当前方法的返回值对象交给IOC容器管理, 成为IOC容器bean
+          //通过@Bean注解的name/value属性指定bean名称, 如果未指定, 默认是方法名
+    public SAXReader reader(DeptService deptService){
+        System.out.println(deptService);
+        return new SAXReader();
+    }
+
+}
+```
+
+在方法上加上一个@Bean注解，Spring 容器在启动的时候，它会自动的调用这个方法，并将方法的返回值声明为Spring容器当中的Bean对象。
+
+注意事项 ：
+
+- 通过@Bean注解的name或value属性可以声明bean的名称，如果不指定，默认bean的名称就是方法名。
+
+- 如果第三方bean需要依赖其它bean对象，直接在bean定义方法中设置形参即可，容器会根据类型自动装配。
+
+
+
+## 2. SpringBoot参数校验器
+
+在日常的开发中，服务端对象的校验是非常重要的一个环节，比如：注册的时候：校验用户名，密码，身份证，邮箱等信息是否为空，以及格式是否正确，但是这种在日常的开发中进行校验太繁琐了，代码繁琐而且很多。Validator框架应运而生，它的出现就是为了解决开发人员在开发的时候减少代码的，提升开发效率。它专门用来做接口的参数校验，比如：密码长度、是否为空等等。
+
+### 2.1 参数校验器
+
+**SpringBoot的validator校验框架支持**
+
+- JSR303特征：JSR303是一项标准，只提供规范不提供实现。规定一些校验规范即校验注解。比如：[@Null](https://github.com/Null)、[@NotNull](https://github.com/NotNull)、[@Pattern](https://github.com/Pattern)。这些类都位于：`javax.validation.constraints`包下。
+- hibernate validation特征：hibernate validation是对JSR303规范的实现并且进行了增强和扩展。并增加了注解：[@Email](https://github.com/Email)、[@Length](https://github.com/Length)、[@Range](https://github.com/Range)等等。
+- Spring Validation：Spring Validation是对Hibernate Validation的二次封装。在SpringMvc模块中添加了自动校验器。并将校验信息封装到特定的类中。
+
+说明：
+JSR303是一种规范，但是不干”实事”，由hibernate validation来进行处理，但是当需要进行自定义扩展校验时，hibernate validation的扩展太过于复杂，进而使用Spring Validation，增强了hibernate validation的可扩展性。
+
+**常用的注解**
+
+| 注解                         | 作用数据类型         | 说明                                                         |
+| ---------------------------- | -------------------- | ------------------------------------------------------------ |
+| @Null                        | 任何类型             | 对象必须为空                                                 |
+| @NotNull                     | 任何类型             | 对象不为空                                                   |
+| @NotBlank                    | 字符串               | 对象不为空，字符串去掉前后空格后长度不为0                    |
+| @NotEmpty                    | 字符串、集合、数组   | 对象不为空，且字符串长度不为0，集合、数组大小不为0           |
+| @AssertTrue                  | 布尔型               | 必须为true；null值有效，Boolean通过校验，boolean不可         |
+| @AssertFalse                 | 布尔型               | 必须为false；null 可通过校验                                 |
+| @Min(number)                 | 整型数               | 数值必须大于或等于指定的最小值                               |
+| @Max(number)                 | 整型数               | 数值必须小于或等于指定的最大值                               |
+| @DecimalMin(decimal)         | 浮点型               | 数值必须大于或等于指定的最小值，内部使用BigDecimal定义数值对象；为 null 是校验通过；默认包含边界值 |
+| @DecimalMax(decimal)         | 浮点型               | 数值必须小于或等于指定的最大值，内部使用BigDecimal定义数值对象；为 null 是校验通过；默认包含边界值 |
+| @Positive                    | 整型数               | 数值必须为正整数                                             |
+| @PositiveOrZero              | 整型数               | 数值必须为正整数或0                                          |
+| @Negative                    | 整型数               | 数值必须为负整数                                             |
+| @NegativeOrZero              | 整型数               | 数值必须为负整数或0                                          |
+| @Digits                      | 数值型或者字符串     | 作为数值其构成必须合法                                       |
+| @Digits(integer=, fraction=) | 数值型               | 数值必须符合指定的整数精度和小数精度                         |
+| @Size(min=, max=)            | 字符串、集合、数组   | 对象的大小在指定区间内；为 null 是校验通过                   |
+| @Past                        | Date或者Calendar对象 | 必须是一个过去的日期                                         |
+| @PastOrPresent               | Date或者Calendar对象 | 必须是一个过去或者当前的日期                                 |
+| @Future                      | Date或者Calendar对象 | 必须是一个将来的日期                                         |
+| @FutureOrPresent             | Date或者Calendar对象 | 必须是一个将来或者当前的日期                                 |
+| @Pattern                     | 字符串               | 必须是规则正确的正则表达式                                   |
+| @Email                       | 字符串               | 必须是Email类型；可以通过指定regexp和flags来自定义email格式；为null时算作通过验证 |
+
+`javax.validation.constraints` 包仅仅定义了上面的一系列注解，真正的实现逻辑在 `org.hibernate.validator` 包中，在 SpringBoot 项目启动时一般都会自动引入 hibernate 包。
+
+Maven 包：org.hibernate.validator.constraints:hibernate-validator-6.0.18.Final
+
+| 注解                | 作用数据类型 | 说明                                        |
+| ------------------- | ------------ | ------------------------------------------- |
+| @Length(min=, max=) | 字符串       | 字符串的长度在指定区间内                    |
+| @Range(min=, max=)  | 数值型       | 数值必须在指定闭区间内                      |
+| @CreditCardNumber   | 字符串       | 必须是通过Luhn校验和测试的信用卡号码        |
+| @URL                | 字符串       | 必须是URL地址                               |
+| @UniqueElements     | 集合类       | 校验集合中的值都是唯一的，null 视为有效成员 |
+
+### 2.2 Spring整合validator
+
+1. 添加依赖
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+```
+
+2. 新建用户实体并结合验证注解
+
+```java
+@Data
+public class UserVo {
+    @NotNull(message = "用户id不能为空")
+    private Long userId;
+    @NotBlank(message = "用户名不能为空")
+    @Length(max = 20, message = "用户名不能超过20个字符")
+    @Pattern(regexp = "^[\\u4E00-\\u9FA5A-Za-z0-9\\*]*$", message = "用户昵称限制：最多20字符，包含文字、字母和数字")
+    private String username;
+    @NotBlank(message = "手机号不能为空")
+    @Pattern(regexp = "^[1][3,4,5,6,7,8,9][0-9]{9}$", message = "手机号格式有误")
+    private String mobile;
+    @NotBlank(message = "联系邮箱不能为空")
+    @Email(message = "邮箱格式不对")
+    private String email;
+    @Future(message = "时间必须是将来时间")
+    private Date createTime;
+}
+```
+
+3. 添加UserValidationController进行校验
+
+```java
+@RestController
+@Api(description = "用户校验")
+@RequestMapping("/user")
+public class UserValiatorController {
+    @PostMapping("/valiator/reg")
+    public UserVo createUser(@RequestBody @Validated UserVo userVo) {
+        return userVo;
+    }
+}
+```
+
+
+
+### 2.3 @Validated和@Valid
+
+**@Validated**对**@Valid**进行了二次封装，但是二者有以下的区别：
+
+1. @Validated提供分组功能，可以在参数验证时，根据不同的分组采用不同的验证机制。@Valid没有分组功能
+2. @Validated用在类型、方法和方法参数上。但不能用于成员属性（field），@Valid可以用在方法、构造函数、方法参数和成员属性（field）上
+3. 一个待验证的pojo类，其中还包含了待验证的对象属性，需要在待验证对象上注解@Valid，才能验证待验证对象中的成员属性，这里不能使用@Validated
+
+
+
+### 2.4 统一异常处理
+
+如果校验不通过会报BindException或者MethodArgumentNotValidException或者ConstraintViolationException
+
+```java
+/**
+ * 处理参数校验异常
+ */
+@ExceptionHandler(value = {BindException.class, ValidationException.class, MethodArgumentNotValidException.class})
+public Result handleValidatorException(@NotNull Exception e) {
+  StringBuilder sb = new StringBuilder("校验失败:[");
+  if (e instanceof BindException) {
+    BindException exception = (BindException) e;
+    BindingResult bindingResult = exception.getBindingResult();
+    for (FieldError fieldError : bindingResult.getFieldErrors()) {
+      sb.append(fieldError.getDefaultMessage()).append(";");
+    }
+  } else if (e instanceof ValidationException) {
+    ValidationException exception = (ValidationException) e;
+    sb.append(exception.getMessage());
+  } else if (e instanceof MethodArgumentNotValidException) {
+    MethodArgumentNotValidException exception = (MethodArgumentNotValidException) e;
+    sb.append(exception.getBindingResult().getFieldError().getDefaultMessage());
+  }
+  sb.append("]");
+  return Result.error(sb.toString());
+}
+```
 

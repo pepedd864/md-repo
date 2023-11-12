@@ -1,5 +1,3 @@
-# Termux
-
 ## 1. Termux简介
 
 Termux 是一个 Android 下一个高级的终端模拟器，开源且不需要 root，支持 apt 管理软件包，十分方便安装软件包，完美支持 Python、 PHP、 Ruby、 Nodejs、 MySQL 等。随着智能设备的普及和性能的不断提升，如今的手机、平板等的硬件标准已达到了初级桌面计算机的硬件标准，用心去打造 DIY 的话完全可以把手机变成一个强大的极客工具。
@@ -972,7 +970,7 @@ Termux 可以安装其他 Linux 发行版系统，核心用到的工具是 chroo
 
 **Termux 安装 Linux 系统项目地址**：https://github.com/sqlsec/termux-install-linux
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/8d4a21f6504ccce1055bbdf62e80d8f0.jpg)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/8d4a21f6504ccce1055bbdf62e80d8f0.jpg)
 
 **确保 Termux 已经安装了 proot 和 Python3 才可以顺利安装**
 
@@ -1107,7 +1105,7 @@ pkg install hollywood
 hollywood
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/761b6165c40d0585c4bcdf0b65f99d61.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/761b6165c40d0585c4bcdf0b65f99d61.png)
 
 ### 9.5 neofetch
 
@@ -1129,7 +1127,7 @@ nyancat
 
 使用 `Ctrl + C` 快捷键退出魔性循环
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/648127a7e49d51324a15d3758f0d21fb.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/648127a7e49d51324a15d3758f0d21fb.png)
 
 ### 9.7 screenfetch
 
@@ -1140,7 +1138,7 @@ pkg install screenfetch
 screenfetch
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/b8de75ee61695576e4def4fe7d20dd36.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/b8de75ee61695576e4def4fe7d20dd36.png)
 
 显示其他 Linux 发行版的 logo：
 
@@ -1219,7 +1217,7 @@ Available filters:
 "border": surround text with a border
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/e2785afd6b415b6e6a8afd75c60ff9b7.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/e2785afd6b415b6e6a8afd75c60ff9b7.png)
 
 ### 9.10 终端二维码
 
@@ -1229,5 +1227,5 @@ Linux 命令行下的二维码，主要核心是这个网址：`http://qrenco.de
 echo "http:www.baidu.com" |curl -F-=\<- qrenco.de
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/e263d34d36d55da4f527ed2f60a5b608.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/e263d34d36d55da4f527ed2f60a5b608.png)
 

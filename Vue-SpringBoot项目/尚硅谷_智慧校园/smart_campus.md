@@ -6,15 +6,15 @@
 
 项目已上传至[github](https://github.com/pepedd864/smart_campus)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/e1a68eacc0e11b3aa91b2b4c4984ecf8.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/e1a68eacc0e11b3aa91b2b4c4984ecf8.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/f6edc321385a9047bd7cee144a7968b0.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/f6edc321385a9047bd7cee144a7968b0.png)
 
 ## 2. 结构
 
 项目使用的是单模块+三层架构（持久层、服务层、表现层）设计，比较简单
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/9f3c4f10de434a0cf9c61805b971e70e.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/9f3c4f10de434a0cf9c61805b971e70e.png)
 
 spingboot 版本为`2.5.14`
 
@@ -135,17 +135,17 @@ spingboot 版本为`2.5.14`
 
 ### 3.2 快速生成代码
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/eadb237b1784107f0fe3ad3d002b01b7.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/eadb237b1784107f0fe3ad3d002b01b7.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/f61ba684a7c36578c2c07800b900055a.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/f61ba684a7c36578c2c07800b900055a.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/e79562671d3dfba03836eace33384d80.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/e79562671d3dfba03836eace33384d80.png)
 
 ### 3.3 检查生成的代码
 
 需要注意`pojo`的主键唯一，否则会报错
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/6c9e1a589ff800f5aed7e025d6513d67.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/6c9e1a589ff800f5aed7e025d6513d67.png)
 
 
 
@@ -286,7 +286,7 @@ public Result<Object> login(@RequestBody LoginForm loginForm, HttpSession sessio
 5. 登录成功根据用户类型生成对应的`token`（`JwtToken`方法在`utils/JwtHelper.java`下）
 6. 返回用户信息
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/6a4b8deb18006b390d2f9b61d2ed24aa.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/6a4b8deb18006b390d2f9b61d2ed24aa.png)
 
 ### 4.3 获取用户信息
 
@@ -328,7 +328,7 @@ public Result<Object> getInfo(@RequestHeader("token") String token) {
 2. 解析`token`，获取用户id和用户类型
 3. 调用服务层方法，获取用户信息，返回浏览器
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/95fb598550012ef9d54f06bb29de0eb4.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/95fb598550012ef9d54f06bb29de0eb4.png)
 
 ## 5. 管理
 
@@ -617,11 +617,11 @@ public Result<Object> headerImgUpload(@RequestPart("multipartFile") MultipartFil
 
 上传图片后，由于图片保存在项目目录下，而前端访问的是后端编译后的资源，故需要重定向到项目目录下才能访问
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/c423516a63e119af0bf64e06845adb3e.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/c423516a63e119af0bf64e06845adb3e.png)
 
 ---
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/a1fa148b0635fc9329d76859d0b2c18f.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/a1fa148b0635fc9329d76859d0b2c18f.png)
 
 ### 6.4 解决方法
 

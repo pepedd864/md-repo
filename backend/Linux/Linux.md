@@ -19,7 +19,7 @@ Linux系统的组成如下:
 
 两部分组成。
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/ff9cd9b5f21336a8169afb4e26b76a0b.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/ff9cd9b5f21336a8169afb4e26b76a0b.png)
 
 - 内核提供系统最核心的功能，如:调度CPU、调度内存、调度文件系统、调度网络通讯、调度lO等。
 - 系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如:文件管理器、任务管理器、图片查看、音乐播放等。
@@ -37,11 +37,11 @@ Linux系统的组成如下:
 - 任何人都可以获得并修改内核，并且自行集成系统级程序
 - 提供了内核+系统级程序的完整封装，称之为Linux发行版
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/9798f378072dfe98587511d559945981.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/9798f378072dfe98587511d559945981.png)
 
 任何人都可以封装Linux，目前市面上有非常多的Linux发行版，常见的如下
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/da4bf0b73234ac9bdefe929f5a72a41b.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/da4bf0b73234ac9bdefe929f5a72a41b.png)
 
 
 
@@ -68,13 +68,13 @@ https://www.xshell.com/zh/free-for-home-school/
 
 1. 新建会话
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/b46d5d1e21aa3a6eb58e52e1195cbab7.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/b46d5d1e21aa3a6eb58e52e1195cbab7.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/2f7c08004d64ac34c62c7d87be3e7514.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/2f7c08004d64ac34c62c7d87be3e7514.png)
 
 2. 成功连接，输入指令
 
-![](https://raw.githubusercontent.com/pepedd864/cdn-repos/main/img/9695ce9c21bced92ce8996fc6a6813a0.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/9695ce9c21bced92ce8996fc6a6813a0.png)
 
 
 
@@ -85,7 +85,7 @@ WSL:
 - Windows Subsystem for Linux，是用于Windows系统之上的Linux子系统。
 - 作用很简单，可以在Windows系统中获得Linux系统环境，并完全直连计算机硬件，无需通过虚拟机虚拟硬件。
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/b5f3cd740aa90faa445a8cc3e76fe841.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/b5f3cd740aa90faa445a8cc3e76fe841.png)
 
 简而言之:
 
@@ -95,17 +95,17 @@ WSL:
 
 微软商店下载安装
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/9f3f39d0086c608b43b089a9c9b6b38f.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/9f3f39d0086c608b43b089a9c9b6b38f.png)
 
 安装完整打开配置
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/29b3b67a375c2fcda478d2abaf41a7ce.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/29b3b67a375c2fcda478d2abaf41a7ce.png)
 
 使用Win11自带的Windows Terminal打开ubuntu
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/01e0bb23bfa69c26543c6f546d8432be.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/01e0bb23bfa69c26543c6f546d8432be.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/ba5ce03b5973545d775c7bdb62c43c4e.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/ba5ce03b5973545d775c7bdb62c43c4e.png)
 
 
 
@@ -119,9 +119,9 @@ WSL:
 - Windows系统可以拥有多个盘符，如C盘、D盘、E盘
 - Linux没有盘符这个概念,只有一个根目录l,所有文件都在它下面
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/e5ebf24c5d608cef60342b91cd9b62f9.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/e5ebf24c5d608cef60342b91cd9b62f9.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/c1925e6a30f09b9359b451d8184a41a5.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/c1925e6a30f09b9359b451d8184a41a5.png)
 
 ### 2.2 路径描述
 
@@ -130,9 +130,9 @@ WSL:
 - 在Linux系统中，路径之间的层级关系，使用:`/`来表示
 - 在Windows系统中，路径之间的层级关系，使用:`\`来表示
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/c70de4a90fa5cdeb31f7dd1cb5d51dfe.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/c70de4a90fa5cdeb31f7dd1cb5d51dfe.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/d69506eca57630252b58178d137fa3a9.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/d69506eca57630252b58178d137fa3a9.png)
 
 
 
@@ -242,7 +242,7 @@ pwd命令查看当前工作目录
 
   
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/3e10b48025b0300dc44a1dff433b5800.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/3e10b48025b0300dc44a1dff433b5800.png)
 
 ### 3.7 touch命令
 
@@ -261,7 +261,7 @@ pwd命令查看当前工作目录
 
 - `cat Linux路径`
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/8c060b4437ac435559fd0112f75a3542.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/8c060b4437ac435559fd0112f75a3542.png)
 
 ---
 
@@ -274,7 +274,7 @@ pwd命令查看当前工作目录
 
 - `more Linux路径`
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/64adb03424123fbe38bb98ceb5aafde4.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/64adb03424123fbe38bb98ceb5aafde4.png)
 
 ### 3.9 cp mv rm 命令
 
@@ -297,7 +297,7 @@ pwd命令查看当前工作目录
   - 参数1，Linux路径，表示被移动的文件或文件夹
   - 参数2，Linux路径，表示被移动去的路径，如果目标不存在，则进行改名，确保目标存在
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/0059176a3b275b93e16e4c8ad44a124f.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/0059176a3b275b93e16e4c8ad44a124f.png)
 
 ---
 
@@ -320,7 +320,7 @@ rm命令可用于删除文件、文件夹
   - `*test`，表示匹配任何以test结尾的内容
   - `*test*`，表示匹配任何包含test的内容
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/4f1ee4a0759ba85885fe8e9e556254ad.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/4f1ee4a0759ba85885fe8e9e556254ad.png)
 
 ### 3.10 which find命令
 
@@ -330,7 +330,7 @@ rm命令可用于删除文件、文件夹
 
 - `which 要查找的命令`
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/8e3c93f2179923f1ee985e010077c2ca.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/8e3c93f2179923f1ee985e010077c2ca.png)
 
 ---
 
@@ -346,7 +346,7 @@ rm命令可用于删除文件、文件夹
 
 为了确保后续演示，拥有最大的权限，可以在整个系统完成搜索我们可以切换到root用户以获得管理员权限
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/84cacb9f5da7ff91cdaa46229f8fba68.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/84cacb9f5da7ff91cdaa46229f8fba68.png)
 
 `find`命令也可以使用通配符进行模糊查找
 
@@ -361,7 +361,7 @@ rm命令可用于删除文件、文件夹
   - 参数，关键字，必填，**表示过滤的关键字**，带有空格或其它特殊符号，建议使用””将关键字包围起来
   - 参数，文件路径，必填，表示要过滤内容的文件路径，可作为内容输入端口
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/da5f78d7e327d8e47532b5bf2a1198d6.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/da5f78d7e327d8e47532b5bf2a1198d6.png)
 
 ---
 
@@ -382,9 +382,9 @@ rm命令可用于删除文件、文件夹
 
 管道符的含义是:**将管道符左边命令的结果，作为右边命令的输入**
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/afabc93066736a4a147b99932b2a5dba.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/afabc93066736a4a147b99932b2a5dba.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/2b54b19a316ec2546be2070c03d7f545.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/2b54b19a316ec2546be2070c03d7f545.png)
 
 ### 3.12 echo、反引号`、tail命令、重定向符号
 
@@ -401,7 +401,7 @@ rm命令可用于删除文件、文件夹
 
 被`包围的内容，会被作为命令执行，而非普通字符
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/9666df6711a3c8cbb36f2bb10a4ab5ab.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/9666df6711a3c8cbb36f2bb10a4ab5ab.png)
 
 ---
 
@@ -412,7 +412,7 @@ rm命令可用于删除文件、文件夹
 - `>`，将左侧命令的结果，**覆盖**写入到符号右侧指定的文件中
 - `>>`，将左侧命令的结果，**追加**写入到符号右侧指定的文件中
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/d4cb8da33a5d19fbb0bb2a0eac04de43.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/d4cb8da33a5d19fbb0bb2a0eac04de43.png)
 
 ---
 
@@ -451,7 +451,7 @@ vi\vim是visual interface的简称，是Linux中最经典的文本编辑器
 
 - 以`:`开始，通常用于文件的保存、退出。
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/b81ea81e7bf8075ab03b6d02057693b2.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/b81ea81e7bf8075ab03b6d02057693b2.png)
 
 ### 4.2 命令模式
 
@@ -563,7 +563,7 @@ su `[-][用户名]`
 
 - 在文件的最后添加
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/70ffbccc4eb78bbdea7f19636f60a295.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/70ffbccc4eb78bbdea7f19636f60a295.png)
 
 - 切换普通用户 使用`sudo 其他命令`
 
@@ -613,7 +613,7 @@ Linux中关于权限的管控级别分别由2个
 - 查看当前系统又那些用户
   - `getent passwd`
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/3e87fa04e90844967f5c5c34562c076b.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/3e87fa04e90844967f5c5c34562c076b.png)
 
 显示有七份信息
 
@@ -621,7 +621,7 @@ Linux中关于权限的管控级别分别由2个
 
 ### 5.4 权限信息
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/7b74c2bdb6d40a160b6af01d597639c4.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/7b74c2bdb6d40a160b6af01d597639c4.png)
 
 - 序号1,表示文件、文件夹的权限控制信息
 - 序号2,表示文件、文件夹所属用户
@@ -633,7 +633,7 @@ Linux中关于权限的管控级别分别由2个
 
 权限细节总共分为10个槽位
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/6d955e2df3192c99361c275a9be5a41d.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/6d955e2df3192c99361c275a9be5a41d.png)
 
 例如：drwxr-xr-x
 
@@ -661,7 +661,7 @@ chmod
 - `chmod [-R] 权限 文件或文件夹`
   - 选项: `-R`，对文件夹内的全部内容应用同样的操作
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/c9868de4472477ac906fe1fb1e28bc63.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/c9868de4472477ac906fe1fb1e28bc63.png)
 
 ---
 
@@ -710,15 +710,15 @@ chown命令
 2. `ctrl + d` 退出账户的登录，或者退出某些特定程序的专属界面
 3. 通过`history`命令，查看历史输入过的命令
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/2771a96f69447ad33769286527b4e2b1.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/2771a96f69447ad33769286527b4e2b1.png)
 
 4. 通过`!`命令前缀，自动执行上一次匹配前缀的命令
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/eb421fc3828ef91158c3c8ac02a0f958.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/eb421fc3828ef91158c3c8ac02a0f958.png)
 
 5. 通过快捷键`ctrl + r`输入内容去匹配历史命令
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/d892c73844d3f8f2e89eacc6497b4814.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/d892c73844d3f8f2e89eacc6497b4814.png)
 
 6. 光标移动
    1. `ctrl + a`，跳到命令开头
@@ -760,7 +760,7 @@ yum:
 sudo yum history list
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/53f1f2140545b5cdb4b1b1487c5dc429.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/53f1f2140545b5cdb4b1b1487c5dc429.png)
 
 2. 查看某个事务的详细信息
 
@@ -768,7 +768,7 @@ sudo yum history list
 sudo yum history info 子命令
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/3118ae773e1ca8c278eaaa640b6af126.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/3118ae773e1ca8c278eaaa640b6af126.png)
 
 3. 回滚事务（删除）
 
@@ -776,7 +776,7 @@ sudo yum history info 子命令
 yum history undo 子命令
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/4c8b5c4154d55592e060c5474ce7e4d7.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/4c8b5c4154d55592e060c5474ce7e4d7.png)
 
 ---
 
@@ -815,7 +815,7 @@ Linux系统很多软件(内置或第三方)均支持使用systemctl命令控制:
   - 参数1：被连接的文件或文件夹
   - 参数2：要连接去的路径
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/fc7d8af060a72b3394a9d48d68475dc8.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/fc7d8af060a72b3394a9d48d68475dc8.png)
 
 ### 6.5 日期和时区
 
@@ -835,7 +835,7 @@ date命令
     - `%S`秒
     - `%s`自1970-01-01 00:00:00 UTC到现在的秒数
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/19e4335ece3df324450a3b557d7dfa99.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/19e4335ece3df324450a3b557d7dfa99.png)
 
 ---
 
@@ -851,7 +851,7 @@ date命令进行日期加减
   - second
 - 可以和格式化字符串一起使用
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/4a654bad078c93f4b855850fb970b8f8.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/4a654bad078c93f4b855850fb970b8f8.png)
 
 ---
 
@@ -888,7 +888,7 @@ ntp程序
 - IPv4版本的地址格式是: a.b.c.d,其中abcd表示0~255的数字，如192.168.88.101就是一个标准的IP地址
 - 可以通过命令:` ifconfig`,查看本机的ip地址，如无法使用`ifconfig`命令,可以安装: `yum -y install net-tools`
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/0ab8f625aa0eeb99caea5b70a34c6aa1.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/0ab8f625aa0eeb99caea5b70a34c6aa1.png)
 
 ---
 
@@ -909,11 +909,11 @@ ntp程序
 
 - Windows
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/4ed2c778c7cf61222bfc176ac380f1f3.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/4ed2c778c7cf61222bfc176ac380f1f3.png)
 
 - Linux
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/67a3fe4f584bac9e9c2adec9daf24636.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/67a3fe4f584bac9e9c2adec9daf24636.png)
 
 修改主机名`hostnamectl set-hostname 主机名`
 
@@ -921,11 +921,11 @@ ntp程序
 
 域名解析
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/39f8ba200a92c915fa8b68037da7725c.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/39f8ba200a92c915fa8b68037da7725c.png)
 
 配置主机名映射
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/50e884cc49b980aefcfbc660e1bb22a7.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/50e884cc49b980aefcfbc660e1bb22a7.png)
 
 ---
 
@@ -936,7 +936,7 @@ DHCP
 
 - 动态获取IP地址，即每次重启设备后都会获取一次,可能导致IP地址频繁变更
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/e00b92ccbeaa222022dcaf562748c5af.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/e00b92ccbeaa222022dcaf562748c5af.png)
 
 ### 6.7 网络请求和下载
 
@@ -972,7 +972,7 @@ curl可以发送http网络请求,可用于:下载文件、获取信息等
   - 选项:`-О`，用于下载文件，当url是下载链接时，可以使用此选项保存文件
   - 参数: `url`，要发起请求的网络地址
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/fed4a0c4d2e16f4d133708263fbb5cc6.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/fed4a0c4d2e16f4d133708263fbb5cc6.png)
 
 ### 6.8 端口
 
@@ -1010,7 +1010,7 @@ netstat
   - 选项:`-f`,以完全格式化的形式展示信息	（展示全部信息)
   - 一般来说，固定用法就是:`ps -ef`列出全部进程的全部信息
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/48fbc2533a7249729e344fd03cc7e0b6.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/48fbc2533a7249729e344fd03cc7e0b6.png)
 
 从左到右分别是∶
 
@@ -1045,36 +1045,36 @@ netstat
   - `-i`不显示任何闲置(idle)或无用(zombie)的进程
   - `-u`查找特定用户启动的进程
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/73663c0c2cc215b19becf58b8b2bf546.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/73663c0c2cc215b19becf58b8b2bf546.png)
 
 top 命令解析
 
 - 第一行
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/04cacc9457349e5ad4275e9281ef96d1.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/04cacc9457349e5ad4275e9281ef96d1.png)
 
 top:命令名称，14:39:58:当前系统时间, up 6 min:启动了6分钟, 2 users:2个用户登录, load:1、5、15分钟负载
 
 - 第二行
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/ca09c57ee577893eea0e595c24c5f98d.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/ca09c57ee577893eea0e595c24c5f98d.png)
 
 Tasks:175个进程，1 running:1个进程子在运行，174 sleeping:174个进程睡眠,O个停止进程,0个僵尸进程
 
 - 第三行
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/a64c4779fe163d8d6ee026867fd453f9.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/a64c4779fe163d8d6ee026867fd453f9.png)
 
 %Cpu(s):CPU使用率，us:用户CPU使用率， sy:系统CPU使用率, ni:高优先级进程占用CPU时间百分比, id:空闲CPU率，wa: IO等待CPU占用率, hi: CPU硬件中断率, si:CPU软件中断率，st:强制等待占用CPU率
 
 - 第四、五行
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/6582d0d8ec4f71ef237c0b821f72ee05.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/6582d0d8ec4f71ef237c0b821f72ee05.png)
 
 Kib Mem:物理内存, total:总量, free:空闲, used:使用, buff/cache: buff和cache占用
 Kib Swap:虚拟内存(交换空间) , total:总量, free:空闲,used:使用, buff/cache: buff和cache占用
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/7711f39ada2884299e85a0aca29f3149.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/7711f39ada2884299e85a0aca29f3149.png)
 
 - PID:进程id
 - USER:进程所属用户
@@ -1116,7 +1116,7 @@ top交互式选项
 - `df [-h]`
 - 选项：`-h`，以更加人性化的单位显示
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/724e351f4382342e270ee400897e4629.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/724e351f4382342e270ee400897e4629.png)
 
 - 可以使用`iostat`查看CPU、硬盘的相关信息
 
@@ -1138,7 +1138,7 @@ top交互式选项
 - 选项：`-n`，查看网络，DEV表示查看网络接口
 - num1；数字，刷新间隔，num2，数字，刷新几次
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/00502eed06afb0b56c064ea17d11a23d.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/00502eed06afb0b56c064ea17d11a23d.png)
 
 ---
 
@@ -1166,11 +1166,11 @@ echo 3 > /proc/sys/vm/drop_caches	# 释放内存命令
 - 操作系统（Windows、Linux、Mac)在运行的时候，记录的一些关键性信息,用以辅助系统运行。在Linux系统中执行:`env`命令即可查看当前系统中记录的环境变量
 - 环境变量是一种KeyValue型结构，即名称和值，如下图:
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/37f2afdae2c303f28d70c7de268e88a1.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/37f2afdae2c303f28d70c7de268e88a1.png)
 
 环境变量PATH
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/d83939126f8be7c552668ca83cba6803.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/d83939126f8be7c552668ca83cba6803.png)
 
 - PATH记录了系统执行任何命令的搜索路径
 
@@ -1182,7 +1182,7 @@ echo 3 > /proc/sys/vm/drop_caches	# 释放内存命令
 
 - 环境变量记录的信息，除了给操作系统自己使用外，如果我们想要取用，也可以使用。取得环境变量的值就可以通过语法:`$环境变量名`来取得比如: `echo $PATH`
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/51dfcbc95ead46bd78825b628258409a.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/51dfcbc95ead46bd78825b628258409a.png)
 
 ---
 
@@ -1197,7 +1197,7 @@ echo 3 > /proc/sys/vm/drop_caches	# 释放内存命令
   - 针对所有用户生效，配置在系统的`/etc/profile`文件中
   - 并通过语法`source 配置文件`，进行立即生效，或者重新登录
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/1855924f7c02c36f59199aea9b9a1836.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/1855924f7c02c36f59199aea9b9a1836.png)
 
 ### 6.12 上传、下载
 
@@ -1225,11 +1225,11 @@ tar压缩解压命令
   - -z,gzip模式，不使用-z就是普通的tarball格式
   - -C，选择解压的目的地，用于解压模式
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/5d825414a7478a22c357eae257266cc5.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/5d825414a7478a22c357eae257266cc5.png)
 
 tar解压
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/d55a7ec804ec8488313ac00696e69e43.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/d55a7ec804ec8488313ac00696e69e43.png)
 
 ---
 
@@ -1280,7 +1280,7 @@ screen -ls
 screen -r 6952
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/502de6db8244d6ea81ce36e0d9cc1444.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/502de6db8244d6ea81ce36e0d9cc1444.png)
 
 6. 关闭screen 窗口
 
@@ -1311,7 +1311,7 @@ sudo ufw default deny # 默认拒绝
 sudo ufw status verbose
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/d9a56935136ef648a2d0519b00c2ebc7.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/d9a56935136ef648a2d0519b00c2ebc7.png)
 
 4. 开启/禁止端口
 
@@ -1364,7 +1364,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ls .oh-my-zsh/themes
 ```
 
-![](https://raw.githubusercontent.com/pepedd864/cdn-repos/main/img/04b270712fc0b4f97aed37b81ea1944e.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/04b270712fc0b4f97aed37b81ea1944e.png)
 
 6. 修改`./zshrc`
 
@@ -1453,11 +1453,11 @@ systemctl start mysqld
 systemctl enable mysqld
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/a9d3c316bed8c67cb8d079d4b8f3bead.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/a9d3c316bed8c67cb8d079d4b8f3bead.png)
 
 4. 查看服务状态
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/da298d3b2b07d7c088fcf5b3d9a0fdd2.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/da298d3b2b07d7c088fcf5b3d9a0fdd2.png)
 
 ---
 
@@ -1470,7 +1470,7 @@ systemctl enable mysqld
 grep "temporary password" /var/log/mysqld.log
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/79e60e969bd764c74432e661a458734b.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/79e60e969bd764c74432e661a458734b.png)
 
 2. 登录管理系统
 
@@ -1478,7 +1478,7 @@ grep "temporary password" /var/log/mysqld.log
 mysql -uroot -p
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/2384129b996b9ac6cde944ef2c1c9ae9.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/2384129b996b9ac6cde944ef2c1c9ae9.png)
 
 3. 修改root用户密码
 
@@ -1532,7 +1532,7 @@ netstat -anp | grep 3306
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/3fcdd9e8fab222b7bb4d8a1a78d6d169.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/3fcdd9e8fab222b7bb4d8a1a78d6d169.png)
 
 2. 配置apt仓库
 
@@ -1541,13 +1541,13 @@ wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
 dpkg -i mysql-apt-config_0.8.12-1_all.deb
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/127d2b156bb64d4a0ed20802d0cfcc58.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/127d2b156bb64d4a0ed20802d0cfcc58.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/67dd46d162a7ee583aa902d66ae0258d.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/67dd46d162a7ee583aa902d66ae0258d.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/2c9cb90f2258212a950ca012ba446221.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/2c9cb90f2258212a950ca012ba446221.png)
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/3cc977139fd4d6fe1a5df0b4700e816a.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/3cc977139fd4d6fe1a5df0b4700e816a.png)
 
 3. 更新apt仓库信息
 
@@ -1564,7 +1564,7 @@ apt update
 apt-cache policy mysql-server
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/9391dce4ca07057804d6b2cef60223c1.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/9391dce4ca07057804d6b2cef60223c1.png)
 
 5. 安装MySQL5.7
 
@@ -1575,7 +1575,7 @@ apt install -f -y mysql-client=5.7* mysql-community-server=5.7*
 
 填写密码
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/4bf078cd6d8a03c34618994e19b62d90.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/4bf078cd6d8a03c34618994e19b62d90.png)
 
 6. 启动MySQL
 
@@ -1585,7 +1585,7 @@ apt install -f -y mysql-client=5.7* mysql-community-server=5.7*
 /etc/init.d/mysql status  #查看状态
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/12a3c83352c92af8545a21f366f75765.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/12a3c83352c92af8545a21f366f75765.png)
 
 7. 初始化
 

@@ -1,6 +1,6 @@
 
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/ac35f27e3f9077d87a91a45ce28d6a48.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/ac35f27e3f9077d87a91a45ce28d6a48.png)
 
 ## 1. 初识Docker
 
@@ -110,7 +110,7 @@ sudo apt-mark hold docker-ce
 
 ### 1.3 Docker架构
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/1642c8c5684a7012c433e3ee4fe61004.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/1642c8c5684a7012c433e3ee4fe61004.png)
 
 - 镜像(lmage) : Docker镜像(lmage) ，就相当于是一个root文件系统。比如官方镜像ubuntu:16.04就包含了完整的一套Ubuntu16.04最小系统的root文件系统。
 - 容器(Container):镜像(lmage）和容器(Container)的关系，就像是面向对象程序设计中的类和对象一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。
@@ -184,7 +184,7 @@ docker images
 docker images -q # 查看所用镜像的id 
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/11fae3d5f622b488d19a5ff15fd99316.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/11fae3d5f622b488d19a5ff15fd99316.png)
 
 - 搜索镜像
 
@@ -192,7 +192,7 @@ docker images -q # 查看所用镜像的id
 docker search redis
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/ab3ab8bd192be05d5ffc971ac617b157.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/ab3ab8bd192be05d5ffc971ac617b157.png)
 
 - 拉取镜像
 
@@ -282,7 +282,7 @@ docker inspect 容器名称
 - 一个数据卷可以被多个容器同时挂载
 - 一个容器也可以挂载多个数据卷
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/565117a28636b0138cf2e14189e98196.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/565117a28636b0138cf2e14189e98196.png)
 
 数据卷的作用
 
@@ -314,7 +314,7 @@ docker run ... -v 宿主机目录（文件）:容器内目录（文件）...
 1. 多个容器挂载同一个数据卷
 2. 数据卷容器
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/b76bafa5cb860d6a2618d811673f6e99.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/b76bafa5cb860d6a2618d811673f6e99.png)
 
 ---
 
@@ -345,7 +345,7 @@ docker run -it --name=c2 --volumes-from c3 centos:7 /bin/bash
 - 当容器中的网络服务需要被外部机器访问时，可以将容器中提供服务的端口映射到宿主机的端口上。外部机器访问宿主机的该端口，从而间接访问容器的服务
 - 这种操作称为：端口映射
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/84aebfd2297911f4cdf520aba6e203ce.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/84aebfd2297911f4cdf520aba6e203ce.png)
 
 
 
@@ -522,7 +522,7 @@ Linux文件系统
 - rootfs: root文件系统，包含的就是典型Linux系统中的/dev,/proc，/bin，/etc等标准目录和文件
 - 不同的linux发行版，bootfs基本一样，而rootfs不同，如ubuntu, centos等
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/cd8d848e4515d34348bc494547b24db4.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/cd8d848e4515d34348bc494547b24db4.png)
 
 docker镜像原理
 
@@ -534,7 +534,7 @@ docker镜像原理
 - 一个镜像可以放在另一个镜像的上面。位于下面的镜像称为父镜像，最底部的镜像成为基础镜像。
 - 当从一个镜像启动容器时，Docker会在最顶层加载一个读写文件系统作为容器
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/2b6a98592320150d014f85a7f66ac34e.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/2b6a98592320150d014f85a7f66ac34e.png)
 
 
 
@@ -608,7 +608,7 @@ CMD java -jar app.jar
 docker build -f ./springboot_dockerfile -t app .
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/b93a701933c467f5d39cc558709c8b0f.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/b93a701933c467f5d39cc558709c8b0f.png)
 
 5. 查看镜像
 
@@ -616,7 +616,7 @@ docker build -f ./springboot_dockerfile -t app .
 docker images
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/3c1d24c41788101f064508c412e988fb.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/3c1d24c41788101f064508c412e988fb.png)
 
 6. 设置端口映射，运行镜像
 
@@ -624,11 +624,11 @@ docker images
 docker run -it -p 9000:80 app
 ```
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/6eb6eb8b0740a61ea287826a31567f8e.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/6eb6eb8b0740a61ea287826a31567f8e.png)
 
 7. 访问项目
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/43406cd3c4b003e7a57e079b6b6d5690.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/43406cd3c4b003e7a57e079b6b6d5690.png)
 
 ## 6. Docker服务编排
 
@@ -646,7 +646,7 @@ docker run -it -p 9000:80 app
   2. 使用docker-compose.yml定义组成应用的各服务
   3. 运行docker-compose up启动应用
 
-![](https://gitee.com/pepedd864/cdn-repos/raw/master/img/6eb28c71548de1f4f4d85d8dde97e095.png)
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/6eb28c71548de1f4f4d85d8dde97e095.png)
 
 ### 6.3 Docker Compose 安装与卸载
 
