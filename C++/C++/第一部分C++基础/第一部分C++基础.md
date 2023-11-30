@@ -69,7 +69,7 @@ int main()
 
 **程序分析:**
 
-```c
+```c++
 #include<stdio.h>        //调用C语言标准库,为main()中调用的printf()函数提供函数原型
 ```
 
@@ -184,10 +184,8 @@ volatile int a = 10;
 - **命名风格:**
 
   - linux风格 `stu_num`
-  
-    - 驼峰风格 `StuNum`
-  
-    - 大小写敏感  `int Num;`  `int num;`
+  - 驼峰风格 `StuNum`
+  - 大小写敏感  `int Num;`  `int num;`
   
 
 ### 2. 基本数据类型

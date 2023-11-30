@@ -427,8 +427,15 @@ pip install git-filter-repo
 
 删除文件或文件夹
 
+> 首先执行垃圾回收
+
+
 ```bash
-git filter-repo --path <file or folder> --invert-paths
+git gc
+```
+
+```bash
+git filter-repo --path <file or folder> --invert-paths --force
 ```
 
 

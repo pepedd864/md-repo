@@ -2461,3 +2461,348 @@ const addItem = () => {
 
 ## 任务执行的洋葱模型
 
+
+
+## 跨标签通信
+
+推特上一位大神的创意代码火了，看了让人直呼脑洞大开
+
+[𝕭𝖏ø𝖗𝖓 𝕾𝖙𝖆𝖆𝖑 (@_nonfigurativ_) / X (twitter.com)](https://twitter.com/_nonfigurativ_)
+
+作者发布了一个简易版本到github上https://github.com/bgstaal/multipleWindow3dScene
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/a78a4a3dcdac134d987af65b984a336c.gif)
+
+这里面除了Threejs实现的炫酷粒子星球效果以外，另一个重要的点就是跨标签通信
+
+跨标签页通信常见方案
+
+- BroadCast Channel
+- Service Worker
+- LocalStorage window.onstorage 监听
+- Shared Worker 定时器轮询( setInterval)
+- IndexedDB 定时器轮询(setInterval)
+- cookie 定时器轮询 ( setInterval)
+- window.open、window.postMessage
+- Websocket
+
+这里作者使用的是LocalStorage监听
+
+LocalStorage监听的原理是通过事件监听`storage`，当其他标签页修改了LocalStorage时，事件触发
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/fd7136bb2ad7a8ca0ef29bc8f55e7852.png)
+
+
+
+了解原理之后，我们可以编写一个类来管理浏览器窗口和`storage`事件
+
+最终达到这种效果
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/5f6f44eba4c8541060ea5e1fec7e56cc.png)
+
+首先定义一个类，我们需要将每个窗口的数据存储在数组中在存入`localStorage`，同时定义窗口位置大小改变时的回调函数`winShapeChangeCallback`，窗口关闭（窗口列表改变）时的回调函数`winChangeCallback`，同时需要获取当前有多少窗口`count`，当前窗口id，当前窗口数据`winData`
+
+```js
+class WindowManager {
+	#windows; // 窗口列表
+	#count; // 窗口计数
+	#id; // 当前窗口ID
+	#winData; // 当前窗口数据
+	#winShapeChangeCallback; // 窗口形状改变回调函数
+	#winChangeCallback; // 窗口列表改变回调函数
+}
+```
+
+在构造函数中监听两个事件，
+
+一个是`storage`更新的事件，需要判断是否有新的窗口数据被添加，如果窗口更改，执行窗口列表更改回调函数
+
+二是页面刷新时（关闭也会触发）移除当前窗口的数据
+
+```js
+constructor() {
+	// localStorage更新时
+	addEventListener("storage", (event) => {
+		// 键名为windows时
+		if (event.key == "windows") {
+			let newWindows = JSON.parse(event.newValue);
+			let winChange = this.#didWindowsChange(this.#windows, newWindows);
+
+			this.#windows = newWindows;
+
+			if (winChange) {
+				if (this.#winChangeCallback) this.#winChangeCallback();
+			}
+		}
+	});
+
+	// 页面刷新时
+	window.addEventListener("unload", (e) => {
+		let index = this.getWindowIndexFromId(this.#id);
+
+		// 从列表中移除当前窗口并更新localStorage
+		this.#windows.splice(index, 1);
+		this.#count--;
+		localStorage.setItem("count", this.#count);
+		localStorage.setItem("windows", JSON.stringify(this.#windows));
+	});
+}
+```
+
+同时需要一个检查窗口列表是否变化的函数
+
+```js
+// 检查窗口列表是否有变化
+#didWindowsChange(pWins, nWins) {
+	if (pWins.length != nWins.length) {
+		return true;
+	} else {
+		let isChange = false;
+
+		for (let i = 0; i < pWins.length; i++) {
+			if (pWins[i].id != nWins[i].id) isChange = true;
+		}
+
+		return isChange;
+	}
+}
+```
+
+获取当前窗口相对屏幕的位置和窗口大小
+
+```js
+// 获取当前窗口的尺寸
+getWinShape() {
+	let shape = {
+		x: window.screenLeft,
+		y: window.screenTop,
+		w: window.innerWidth,
+		h: window.innerHeight,
+	};
+	return shape;
+}
+```
+
+初始化，从localStorage读入数据，**metaData在这个示例中没有使用，但是它其实是多窗口通信的意义之一，即传递有效信息**，当然shape在实现这个示例的效果中也是重要信息。
+
+```js
+init(metaData) {
+	// 从localStorage读取数据
+	this.#windows = JSON.parse(localStorage.getItem("windows")) || [];
+	this.#count = localStorage.getItem("count") || 0;
+	this.#count++;
+	
+	this.#id = this.#count;
+	let shape = this.getWinShape();
+	// 当前窗口的所有数据
+	this.#winData = { id: this.#id, shape: shape, metaData: metaData };
+	this.#windows.push(this.#winData);
+
+	localStorage.setItem("count", this.#count);
+	localStorage.setItem("windows", JSON.stringify(this.#windows));
+}
+```
+
+通过id获取窗口信息的索引
+
+```js
+// 通过id获取窗口的索引
+getWindowIndexFromId(id) {
+	let index = -1;
+
+	for (let i = 0; i < this.#windows.length; i++) {
+		if ((this.#windows[i].id == id)) index = i;
+	}
+
+	return index;
+}
+```
+
+最重要的就是更新窗口位置大小数据，这个函数在外部可以放在渲染函数中使用`requestAnimationFrame`实时更新
+
+```js
+// 更新窗口位置大小数据
+update() {
+	let winShape = this.getWinShape();
+
+	if (
+		winShape.x != this.#winData.shape.x ||
+		winShape.y != this.#winData.shape.y ||
+		winShape.w != this.#winData.shape.w ||
+		winShape.h != this.#winData.shape.h
+	) {
+		this.#winData.shape = winShape;
+
+		let index = this.getWindowIndexFromId(this.#id);
+		this.#windows[index].shape = winShape;
+
+		// 调用回调函数
+		if (this.#winShapeChangeCallback) this.#winShapeChangeCallback();
+		localStorage.setItem("windows", JSON.stringify(this.#windows));
+	}
+}
+```
+
+最后由于我们定义的是私有字段（`#`开头的字段名），所以需要对外提供访问函数
+
+```js
+setWinShapeChangeCallback(callback) {
+	this.#winShapeChangeCallback = callback;
+}
+
+setWinChangeCallback(callback) {
+	this.#winChangeCallback = callback;
+}
+
+getWindows() {
+	return this.#windows;
+}
+
+getThisWindowData() {
+	return this.#winData;
+}
+
+getThisWindowID() {
+	return this.#id;
+}
+```
+
+最后导出WindowManager对象即可
+
+```js
+export default WindowManager;
+```
+
+
+
+现在实现一个简化版本，没错就是作者简化版本再简化的版本🤣
+
+
+
+按照上面的代码编写完成WindowsManager后，我们在一个简单的页面中进行测试
+
+创建main.js文件，写入如下内容
+
+```js
+import WindowManager from "./windowManager.js";
+let windowManager;
+(function() {
+	windowManager = new WindowManager();
+	windowManager.init();
+})()
+function render() {
+	requestAnimationFrame(render);
+	windowManager.update();
+}
+render();
+```
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/484ed733f6f26edb423506aa9bf75595.gif)
+
+
+
+我们编写一个创建立方体div的函数
+
+```js
+function mountBox(x, y, color) {
+	let box = document.createElement("div");
+	box.classList.add("box");
+	document.body.appendChild(box);
+	boxes.push(box);
+	boxes[index].style.transform = `translate(${x}px, ${y}px)`;
+	boxes[index].style.backgroundColor = color;
+	boxes[index].innerHTML = index;
+	boxPos.push({ x: x, y: y });
+	index++;
+}
+
+mountBox(
+	0,
+	0,
+	"red"
+);
+```
+
+这个时候会创建一个红色的立方体
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/73bb7ae9851289ef1d16973b1c18f505.png)
+
+当然，在至此之前，你需要添加以下样式
+
+```css
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #000;
+}
+
+.box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+	color: white;
+	background-color: red;
+	transform: none;
+	transition: all 1s;
+}
+```
+
+再编写一个更新位置的函数
+
+```js
+function updateBox(index, x, y) {
+	boxes[index].style.transform = `translate(${x}px, ${y}px)`;
+	boxPos[index].x = x;
+	boxPos[index].y = y;
+}
+
+updateBox(0, 100, 100);
+```
+
+此时立方体在这里
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/90c0cc0846df0de5e209db190d6a0829.png)
+
+我们在之前的render函数中加上更新立方体位置的函数，它就变成了这样，立方体在你拖拽窗口改变大小时都始终在屏幕中间
+
+```js
+mountBox(
+	windowManager.getWinShape().w / 2 - 50,
+	windowManager.getWinShape().h / 2 - 50,
+	"red"
+);
+
+function render() {
+	requestAnimationFrame(render);
+	windowManager.update();
+	updateBox(
+		0,
+		windowManager.getWinShape().w / 2 - 50,
+		windowManager.getWinShape().h / 2 - 50
+	);
+}
+render();
+```
+
+再编写一个卸载立方体的函数
+
+```js
+function unmountBox(index) {
+	boxes[index].remove();
+	boxes.splice(index, 1);
+	boxPos.splice(index, 1);
+}
+
+unmountBox(0);
+```
+
+
+
+立方体位置的计算方式
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/0de6329474f93e76884c951a649749c3.png)

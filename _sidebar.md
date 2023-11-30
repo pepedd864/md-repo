@@ -141,6 +141,8 @@
       - [vue-echarts](Vue-SpringBoot项目/常用的vue库/vue-echarts/vue-echarts.md)
   - **简单项目**
     - [简单项目](Vue-SpringBoot项目/简单项目/简单项目.md)
+- **代码规范**
+  - [代码规范](代码规范/代码规范.md)
   - **esp32**
     - [esp32](嵌入式/esp32/esp32.md)
   - **LVGL**
