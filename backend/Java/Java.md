@@ -4402,3 +4402,232 @@ public static Object newProxyInstance(ClassLoader loader,Class<?>[] interfaces,I
 参数三:用来指定生成的代理对象要干什么事情
 ```
 
+
+
+## 10. 注解
+
+### 10.1 什么是注解
+
+注解（`Annotation`）是Java SE 5.0 版本开始引入的概念，它是对 Java 源代码的说明，是一种元数据（描述数据的数据）。
+
+- 注解的定义通过 `@interface` 表示，所有的注解会自动继承 `java.lang.Annotation` 接口，且不能再继承别的类或是接口。
+- 注解的成员参数只能用 `public` 或默认 (`default`) 访问权修饰来进行修饰。
+- 成员参数只能使用 8 种基本类型（byte、short、char、int、long、float、double、boolean）和 String、Enum、Class、annotations等数据类型，及其数组。
+- 获取类方法和字段的注解信息，只能通过 Java 的反射技术来获取 Annotation 对象。
+- 注解可以没有定义成员，只做标识。
+
+
+
+### 10.2 注解的分类
+
+按照来源划分，注解可以分为 3 类
+
+1. JDK的注解
+2. 第三方的注解
+3. 自定义注解
+
+#### 10.2.1 JDK注解
+
+JAVA内置注解在 `java.lang` 中，4个元注解在 `java.lang.annotation` 中。
+
+**JAVA内置注解**
+
+- @Override （标记重写方法）
+- @Deprecated （标记过时）
+- @SuppressWarnings （忽略警告）
+
+**元注解 (注解的注解)**
+
+- @Target （注解的作用目标）
+- @Retention （注解的生命周期）
+- @Document （注解是否被包含在JavaDoc中）
+- @Inherited （是否允许子类继承该注解）
+
+**@Target**
+
+`@Target` 注解表明该注解可以应用的JAVA元素类型。
+
+| Target类型                  | 描述                                                         |
+| --------------------------- | ------------------------------------------------------------ |
+| ElementType.TYPE            | 应用于类、接口（包括注解类型）、枚举                         |
+| ElementType.FIELD           | 应用于属性（包括枚举中的常量）                               |
+| ElementType.METHOD          | 应用于方法                                                   |
+| ElementType.PARAMETER       | 应用于方法的形参                                             |
+| ElementType.CONSTRUCTOR     | 应用于构造函数                                               |
+| ElementType.LOCAL_VARIABLE  | 应用于局部变量                                               |
+| ElementType.ANNOTATION_TYPE | 应用于注解类型                                               |
+| ElementType.PACKAGE         | 应用于包                                                     |
+| ElementType.TYPE_PARAMETER  | 1.8版本新增，应用于类型变量                                  |
+| ElementType.TYPE_USE        | 1.8版本新增，应用于任何使用类型的语句中（例如声明语句、泛型和强制转换语句中的类型） |
+
+**@Retention**
+
+`@Retention`  表明该注解的生命周期。
+
+| 生命周期类型            | 描述                                                         |
+| ----------------------- | ------------------------------------------------------------ |
+| RetentionPolicy.SOURCE  | 编译时被丢弃，不包含在类文件中                               |
+| RetentionPolicy.CLASS   | JVM加载时被丢弃，包含在类文件中，默认值                      |
+| RetentionPolicy.RUNTIME | 始终不会丢弃，可以使用反射获得该注解的信息。由JVM 加载，包含在类文件中，在运行时可以被获取到。自定义的注解最常用的使用方式。 |
+
+**@Document**
+
+表明该注解标记的元素可以被Javadoc 或类似的工具文档化
+
+**@Inherited**
+
+表明使用了@Inherited注解的注解，所标记的类的子类也会拥有这个注解。
+
+
+
+#### 10.2.2 第三方注解
+
+如各种框架的注解，如 Spring 的注解
+
+- @Autowired
+- @Service
+- ...
+
+#### 10.2.3 自定义注解
+
+使用元注解定义自己的注解
+
+
+
+### 10.3 注解的语法
+
+```java
+/**
+ * 修饰符 @interface 注解名 {
+ * 注解元素的声明1
+ * 注解元素的声明2
+ * }
+ */
+```
+
+ - 修饰符：访问修饰符必须为public,不写默认为pubic；
+ - 关键字：必须为@interface；
+ - 注解名： 注解名称为自定义注解的名称，使用时还会用到；
+ - 注解类型元素：注解类型元素是注解中内容，可以理解成自定义接口的实现部分；
+
+```java
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface MyTestAnnotation {
+    /**
+     *    注解的元素声明的两种形式
+     *    type elementName();
+     *    type elementName() default value;  
+     */
+    String value() default "test";
+}
+```
+
+下面结合注解的语法，给出 `@Service` 注解的示例。
+
+```java
+@Target({ElementType.TYPE})// ElementType.TYPE 代表在注解上使用
+@Retention(RetentionPolicy.RUNTIME)// RetentionPolicy.RUNTIME 代表运行时使用，可以通过反射获取到
+@Documented//包含在JavaDoc中
+@Component//允许通过包扫描的方式自动检测
+public @interface Service {
+
+    /**
+     * The value may indicate a suggestion for a logical component name,
+     * to be turned into a Spring bean in case of an autodetected component.
+     * @return the suggested component name, if any (or empty String otherwise)
+     */
+    @AliasFor(annotation = Component.class)
+    String value() default "";
+}
+```
+
+
+
+### 10.4 利用反射解析注解
+
+#### 10.4.1 相关API
+
+对于定义的注解，可以使用反射技术对注解进行处理。`java.lang.reflect.AnnotationElement` 接口提供了该功能。如下图所示，反射相关的类 `Class`, `Method`, `Field` 都实现了 `AnnotationElement` 接口。
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/51591aef575dd10beaa9634e9b68118e.webp)
+
+因此，只要我们通过反射拿到 `Class`, `Method`, `Field` 类，就能够通过 `getAnnotation(Class)` 拿到我们想要的注解并取值。获取类方法和字段的注解信息，常用的方法包括
+
+- `isAnnotationPresent`：判断当前元素是否被指定注解修饰
+- `getAnnotation`：返回指定的注解
+- `getAnnotations`：返回所有的注解
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/f7bcc04a0da63bd1d96721d25e08aba8.webp)
+
+
+
+#### 10.4.2 示例
+
+此处给出利用反射技术，对自定义注解进行解析的示例。
+
+1. 定义自定义注解
+2. 配置注解
+3. 利用反射解析注解
+
+**定义自定义注解**
+
+```java
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface MyTestAnnotation {
+    String value() default "test";
+}
+```
+
+**配置注解**
+
+```java
+@Data
+@Builder
+@MyTestAnnotation
+public class MyBean {
+    private String name;
+    private int age;
+}
+```
+
+**利用反射解析注解**
+
+```java
+public class MyTest {
+
+    //isAnnotationPresent：判断当前元素是否被指定注解修饰
+    //getAnnotation：返回指定的注解
+    //getAnnotations：返回所有的注解
+    public static void main(String[] args) {
+        try {
+            //获取MyBean的Class对象
+            MyBean myBean = MyBean.builder().build();
+            Class clazz = myBean.getClass();
+            
+            //判断myBean对象上是否有MyTestAnnotation注解
+            if (clazz.isAnnotationPresent(MyTestAnnotation.class)) {
+                System.out.println("MyBean类上配置了MyTestAnnotation注解！");
+                //获取该对象上MyTestAnnotation类型的注解
+                MyTestAnnotation myTestAnnotation = (MyTestAnnotation) clazz.getAnnotation(MyTestAnnotation.class);
+                System.out.println(myTestAnnotation.value());
+            } else {
+                System.out.println("MyBean类上没有配置MyTestAnnotation注解！");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+运行程序，结果如下
+
+```
+MyBean类上配置了MyTestAnnotation注解！
+test
+```
+

@@ -464,3 +464,64 @@ git sparse-checkout add login-crud
 git sparse-checkout set antdv-theme-mgr
 ```
 
+
+
+## 6.3 使用rebase合并commit
+
+使用`rebase`命令可以修改和合并commit信息
+
+1. 使用`git rebase -i commitId` 修改某个commit的信息，(注：打开的是vim编辑器，不了解可以先学习一下)，修改完成`:wq`保存即可
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/2c5ccf43e526cfa1e238eb406069dc1b.png)
+
+2. 使用`git rebase -i HEAD~n`修改按照时间顺序由近到远显示最近提交的n条commit，比如`git rebase -i HEAD~3`
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/913d70545c7691f559b24b5daccdee80.png)
+
+3. `git rebase -i --root`显示所有的commit信息
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/2939aba6ca5655b3659b8b7966072d61.png)
+
+
+
+根据提示信息(下面的蓝字)，我们知道
+
+- pick就是默认采用这个commit，不用管他
+- edit就是对这条进行修改
+- s就是合并
+- f也是合并，但是只保留最前边的commit信息。如果加上-c那只保留最新的commit信息
+
+合并commit可以使用`squash`或者`fixed`，区别是前者会保留commit信息
+
+
+
+比如我们需要将3和4合并，并保留commit信息
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/503a58ae91c0a3ba8b5f790bd831d4cb.png)
+
+可以使用`git rebase -i --root`
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/1c60820309da9f2df08ae5d2f280fb03.png)
+
+这样修改即可
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/08555b6719dec7655705fa061bd0c3eb.png)
+
+修改commit信息
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/d3a86d6789513f3efd98f6e924ae4564.png)
+
+这个时候就是修改完的样子了
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/1d037392e5c764b763b76033211d2d85.png)
+
+在github上的commit提交信息
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/55b1ad3f4eae799f9aadaa752af2e56c.png)
+
+`squash 3 and 4`是这样
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/4df77539b54114d463c978fd012a4302.png)
+
+
+
