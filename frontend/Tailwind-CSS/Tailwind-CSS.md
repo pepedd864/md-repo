@@ -221,6 +221,22 @@ module.exports = {
 }
 ```
 
+5. 在vite.config.js中添加
+
+```js
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
+
+css: {
+    postcss: {
+      plugins: [
+        tailwindcss,
+        autoprefixer,
+      ],
+    },
+  },
+```
+
 
 
 ### 2.2 在项目中引入Tailwind
