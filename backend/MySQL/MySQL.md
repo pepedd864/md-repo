@@ -97,7 +97,7 @@ DDL
 #### 2.3.3 创建表
 
 ```sql
-CRETA TABLE 表名(
+CREATA TABLE 表名(
     字段1 字段1类型[COMMENT 字段1注释],
     字段2 字段2类型[COMMENT 字段2注释],
     字段3 字段3类型[COMMENT 字段3注释],
