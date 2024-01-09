@@ -2806,3 +2806,94 @@ unmountBox(0);
 立方体位置的计算方式
 
 ![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/0de6329474f93e76884c951a649749c3.png)
+
+
+
+## 使用computed解决v-model问题
+
+正常使用vue 组件传参需要实现双向数据流，对于对象传参，直接使用v-model可能打断双向数据流，故可以使用computed加proxy实现对象传参的双向数据流
+
+```vue
+<script setup lang="ts">
+import { computed } from "vue";
+const emit = defineEmits(["update:modelValue"]);
+const props = defineProps<{
+	modelValue: {
+		username: string;
+		password: string;
+	};
+}>();
+const model = computed({
+	get() {
+		return new Proxy(props.modelValue, {
+			set(obj, name, val) {
+				emit("update:modelValue", {
+					...obj,
+					[name]: val,
+				});
+				return true;
+			},
+		});
+	},
+	set(val) {
+		emit("update:modelValue", val);
+	},
+});
+</script>
+
+<template>
+	用户名：<input type="text" v-model="model.username" /><br />
+	密码：<input type="password" v-model="model.password" />
+</template>
+
+<style scoped></style>
+```
+
+可以封装成useVModel
+
+```ts
+import { computed } from "vue";
+export function useVModel(props: any, propName: string, emit: Function) {
+	return computed({
+		get() {
+			return new Proxy(props[propName], {
+				set(obj, name, val) {
+					console.log(1);
+					emit("update:" + propName, {
+						...obj,
+						[name]: val,
+					});
+					return true;
+				},
+			});
+		},
+		set(val) {
+			emit("update:" + propName, val);
+		},
+	});
+}
+```
+
+然后再使用
+
+```vue
+<script setup lang="ts">
+import { useVModel } from "../hooks/useVModel";
+const emit = defineEmits(["update:modelValue"]);
+const props = defineProps<{
+	modelValue: {
+		username: string;
+		password: string;
+	};
+}>();
+const model = useVModel(props, "modelValue", emit);
+</script>
+
+<template>
+	用户名：<input type="text" v-model="model.username" /><br />
+	密码：<input type="password" v-model="model.password" />
+</template>
+
+<style scoped></style>
+```
+
