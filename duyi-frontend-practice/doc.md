@@ -2813,6 +2813,8 @@ unmountBox(0);
 
 正常使用vue 组件传参需要实现双向数据流，对于对象传参，直接使用v-model可能打断双向数据流，故可以使用computed加proxy实现对象传参的双向数据流
 
+> 注：可以使用vueuse中的useVModel
+
 ```vue
 <script setup lang="ts">
 import { computed } from "vue";
@@ -2895,5 +2897,142 @@ const model = useVModel(props, "modelValue", emit);
 </template>
 
 <style scoped></style>
+```
+
+
+
+## vue封装组件的正确方式
+
+创建一个input 组件
+
+```vue
+<script setup lang="ts"></script>
+
+<template>
+  <div class="i-input">
+    <a-input />
+  </div>
+</template>
+
+<style scoped lang="scss"></style>
+```
+
+### 1. 传递属性
+
+此时还没有绑定属性，inputValue没有被改变
+
+```vue
+<script lang="ts" setup>
+import IInput from '@/components/IInput/IInput.vue'
+import { ref, watch } from 'vue'
+
+const inputValue = ref()
+watch(
+  inputValue,
+  (val) => {
+    console.log(val)
+  },
+  {
+    immediate: true,
+  },
+)
+</script>
+
+<template>
+  <div>
+    <i-input v-model:value="inputValue" />
+  </div>
+</template>
+
+<style lang="scss" scoped></style>
+```
+
+这里希望的是将所有属性传递给i-input，可以使用`$atters`
+
+### 2. 传递插槽
+
+可以使用`$slots`获取所有的插槽
+
+```vue
+<script setup lang="ts"></script>
+
+<template>
+  <div class="i-input">
+    <a-input v-bind="$attrs">
+      <template v-for="(value, name) in $slots" #[name]='slotData'>
+        <slot :name="name" v-bind='slotData || {}'></slot>
+      </template>
+    </a-input>
+  </div>
+</template>
+
+<style scoped lang="scss"></style>
+```
+
+### 3. 传递ref
+
+```vue
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  mounted() {
+    const entries = Object.entries(this.$refs.instance)
+    entries.forEach(([key, value]) => {
+      this[key] = value
+    })
+  },
+})
+</script>
+
+<template>
+  <div class="i-input">
+    <a-input ref="instance" v-bind="$attrs">
+      <template v-for="(value, name) in $slots" #[name]="slotData">
+        <slot :name="name" v-bind="slotData || {}"></slot>
+      </template>
+    </a-input>
+  </div>
+</template>
+
+<style scoped lang="scss"></style>
+```
+
+
+
+使用组件时就可以拿到a-input的所有方法
+
+```vue
+<script lang="ts" setup>
+import IInput from '@/components/IInput/IInput.vue'
+import { onMounted, ref, watch } from 'vue'
+
+const inpRef = ref()
+const inputValue = ref()
+onMounted(() => {
+  console.log(inpRef.value)
+})
+watch(
+  inputValue,
+  (val) => {
+    console.log(val)
+  },
+  {
+    immediate: true,
+  },
+)
+</script>
+
+<template>
+  <div>
+    <i-input ref="inpRef" v-model:value="inputValue" placeholder="placeholder">
+      <template #prefix>
+        <Icon icon="SearchOutlined" />
+      </template>
+    </i-input>
+  </div>
+</template>
+
+<style lang="scss" scoped></style>
 ```
 

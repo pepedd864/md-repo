@@ -1,4 +1,26 @@
-## 1. 安装字体
+# Windows终端美化
+
+总所周知，Windows默认的终端非常难看且不好用，本文介绍使用Windows Terminal+nerd-fonts+Oh my posh+PSReadLine 实现终端的美化字体样式和自动补全。
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/aa3de8f6bda0d052061d6b9f73e92163.png)
+
+## 1. 安装Chocolatey
+
+在[Chocolatey Software | Installing Chocolatey](https://chocolatey.org/install)网页下，复制安装脚本
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/135dba74fade69aaada79a0025f5312e.png)
+
+安装脚本
+
+```shell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+
+复制到终端中
+
+即可自动安装`Chocolatey`
+
+## 2. 安装字体
 
 推荐使用等宽连体带图标(终端显示的花样多一点)的字体
 
@@ -12,7 +34,9 @@ choco install nerd-fonts-hack
 
 
 
-## 2. 编辑windows terminal 配置使用Nerd Fonts字体
+## 3. 编辑windows terminal 配置使用Nerd Fonts字体
+
+这里很多人都会去下载一个powershell，其实没有必要，Windows自带的powershell的版本和功能已经可以满足要求。
 
 ![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/e0547c1027f29d4dc2590790efab2f4c.png)
 
@@ -62,7 +86,7 @@ choco install nerd-fonts-hack
 
 ![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/075e892a965f8d16d6aae7516bf7a769.png)
 
-## 3. 设置管理员权限启动
+## 4. 设置管理员权限启动
 
 没有这个选项的更新即可
 
@@ -70,7 +94,7 @@ choco install nerd-fonts-hack
 
 
 
-## 4. 使用oh-my-posh
+## 5. 使用oh-my-posh
 
 1. 安装，还是使用`Chocolatey`
 
@@ -108,7 +132,7 @@ oh-my-posh init pwsh --config ~/.omp.theme.json | Invoke-Expression
 
 
 
-## 5. 使用自动补全
+## 6. 使用自动补全
 
 1. 先安装最新的`PowerShellGet`
 
