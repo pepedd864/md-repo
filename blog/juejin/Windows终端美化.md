@@ -86,6 +86,45 @@ choco install nerd-fonts-hack
 
 ![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/075e892a965f8d16d6aae7516bf7a769.png)
 
+添加快捷键
+
+```json
+"actions": 
+[
+    {
+        "command": 
+        {
+            "action": "copy",
+            "singleLine": false
+        },
+        "keys": "ctrl+c"
+    },
+    {
+        "command": "paste",
+        "keys": "ctrl+v"
+    },
+    {
+        "command": 
+        {
+            "action": "splitPane",
+            "split": "auto",
+            "splitMode": "duplicate"
+        },
+        "keys": "alt+shift+d"
+    },
+    {
+        "command": "find",
+        "keys": "ctrl+shift+f"
+    },
+    {
+        "command": "toggleFocusMode",
+        "keys": "alt+z"
+    }
+],
+```
+
+这样可以使用`alt+z`打开标题栏
+
 ## 4. 设置管理员权限启动
 
 没有这个选项的更新即可
@@ -132,7 +171,17 @@ oh-my-posh init pwsh --config ~/.omp.theme.json | Invoke-Expression
 
 
 
-## 6. 使用自动补全
+## 6.终端禁止运行脚本解决方案
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/77680a9388ce0afedeffe5407637f452.png)
+
+输入这个命令即可
+
+```bash
+set-ExecutionPolicy RemoteSigned
+```
+
+## 7. 使用自动补全
 
 1. 先安装最新的`PowerShellGet`
 
