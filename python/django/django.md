@@ -19,7 +19,7 @@ pip install mysqlclient
 
 5. 配置`settings.py`文件，配置MySQL数据库引擎
 
-```py
+```python
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -49,7 +49,7 @@ DATABASES = {
 
 9. 将`backend`加入到`settings.py`的`INSTALLED_APPS`中
 
-```py
+```python
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -63,7 +63,7 @@ INSTALLED_APPS = [
 
 10. 在`backend/models.py`中写一个简单的`model`如下
 
-```py
+```python
 import json
 
 from django.core.serializers import serialize
@@ -101,7 +101,7 @@ python manage.py migrate
 
 12. 在 backend/views 里我们新增两个接口，一个返回所有的书籍列表，一个往数据库里添加一条book数据。
 
-```py
+```python
 import json
 
 from django.core import serializers
@@ -150,7 +150,7 @@ def show_books(request):
 
 13. 在 backend 目录下，新增一个 urls.py 文件，把我们新增的两个接口添加到路由里
 
-```py
+```python
 from django.urls import path
 
 from backend.views import add_book, show_books
@@ -163,7 +163,7 @@ urlpatterns = [
 
 14. 最后要把`backend` 下的 `urls` 添加到项目 `SimpleDjango`下的 `urls` 中，才算完成路由
 
-```py
+```python
 from django.contrib import admin
 from django.urls import path, include
 
@@ -362,7 +362,7 @@ pip install django-cors-headers
 
 修改`settings.py`
 
-```py
+```python
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -389,7 +389,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 1. 修改 djangoVue 下的 urls ，使用通用视图创建最简单的模板控制器，访问 『/』时直接返回 index.html
 
-```py
+```python
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
@@ -403,7 +403,7 @@ urlpatterns = [
 
 2. 配置 Django 项目的模板搜索路径。上一步使用了 Django 的模板系统，所以需要配置一下模板使 Django 知道从哪里找到 index.html。修改 settings.py 文件，如下：
 
-```py
+```python
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -424,7 +424,7 @@ TEMPLATES = [
 
 3. 配置静态文件的url和搜索路径
 
-```py
+```python
 # settings.py 静态文件搜索路径
 STATIC_URL = 'assets/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -433,7 +433,7 @@ STATICFILES_DIRS = [
 ]
 ```
 
-```py
+```python
 # urls.py 添加静态文件url到总url配置文件中
 from django.conf.urls.static import static
 from django.contrib import admin

@@ -14,7 +14,7 @@ pip install djangorestframework
 
 2. 添加到`INSTALL_APPS`中
 
-```py
+```python
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

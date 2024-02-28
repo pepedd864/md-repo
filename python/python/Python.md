@@ -10,7 +10,7 @@
 
 - 单行注释:以#开头，#右边的所有文字当作说明，而不是真正要执行的程序，起辅助说明作用
 
-```py
+```python
 # 我是单行注释
 print( "Hello World")
 ```
@@ -19,7 +19,7 @@ print( "Hello World")
 
 - 多行注释:以一对三个双引号引起来("""注释内容""")来解释说明一段代码的作用使用方法
 
-```py
+```python
 """
 我是多行注释
 我是多行注释
@@ -71,7 +71,7 @@ print( "Hello World")
 
 - `<class '数据类型'>`
 
-```py
+```python
 str = "Hello World"
 var = None
 print(type(1))
@@ -227,7 +227,7 @@ not  or  pass  raise  return  try  whi1e  with  yield
 
 通过下面语法进行字符串拼接
 
-```py
+```python
 str = "string %s" % name
 ```
 
@@ -254,7 +254,7 @@ str = "string %s" % name
 
 - `f"内容{变量}"`的格式来快速格式化
 
-```py
+```python
 name = "张三"
 age = 18
 print(f"我是{name},我是{age}岁")
@@ -271,7 +271,7 @@ print(f"我是{name},我是{age}岁")
 
 - `.format(变量,变量)`
 
-```py
+```python
 name = "张三"
 age = 18
 print("我是.format()格式化输出的：我叫{}，今年{}岁".format(name, age))
@@ -312,12 +312,12 @@ print函数输出一行文本，可以是字符串，数值，或者其他类型
 
 - 要使print输出默认不换行可以使用`end = ''`参数，即可使print输出不换行
 
-```py
+```python
 print("hello",end = '')
 print('world',end = '')
 ```
 
-```py
+```python
 输出结果
 helloworld
 ```
@@ -328,7 +328,7 @@ helloworld
 
 语法
 
-```py
+```python
 if 判断条件:
     条件成立时执行的语句
     条件成立时执行的语句
@@ -343,7 +343,7 @@ if 判断条件:
 
 语法
 
-```py
+```python
 if 判断条件:
     条件成立时执行的语句
     条件成立时执行的语句
@@ -358,7 +358,7 @@ else:
 
 语法
 
-```py
+```python
 if 判断条件1:
     条件成立时执行的语句
     条件成立时执行的语句
@@ -381,7 +381,7 @@ else:
 
 语法
 
-```py
+```python
 if 判断条件1:
     条件成立时执行的语句
     条件成立时执行的语句
@@ -402,7 +402,7 @@ else:
 
 语法
 
-```py
+```python
 while 条件:
     条件满足时执行的语句
     条件满足时执行的语句
@@ -413,7 +413,7 @@ while 条件:
 
 语法
 
-```py
+```python
 for 临时变量 in 待处理数据集:
     满足条件时执行的代码
 ```
@@ -428,7 +428,7 @@ for 临时变量 in 待处理数据集:
 
 ##### 10.2.1 统计字母出现次数
 
-```py
+```python
 str = "Visul Studio Code"
 count = 0
 for x in str:
@@ -469,7 +469,7 @@ print(count)
 
 while循环
 
-```py
+```python
 i = 1
 while i <= 9:
     j = 1
@@ -482,7 +482,7 @@ while i <= 9:
 
 for循环
 
-```py
+```python
 for i in range(1, 10):
     for j in range(1, i+1):
         print(f"{j} * {i} = {i*j}", end="\t")
@@ -511,7 +511,7 @@ break可以用于:for循环和while循环，效果一致
 
 定义
 
-```py
+```python
 def 函数名(传入参数):
 	函数体
 	return 返回值
@@ -519,7 +519,7 @@ def 函数名(传入参数):
 
 调用
 
-```py
+```python
 函数名(参数)
 ```
 
@@ -533,7 +533,7 @@ def 函数名(传入参数):
 
 传入参数的功能是:在函数进行计算的时候，接受外部（调用时）提供的数据
 
-```py
+```python
 def add(x, y):
     result = x+y
     print(result)
@@ -542,7 +542,7 @@ add(1, 1)
 
 #### 11.3 返回值
 
-```py
+```python
 def 函数(参数...)
 	函数体
     return 返回值
@@ -557,7 +557,7 @@ Python中有一个特殊的字面量:None，其类型是:`<class 'NoneType'>`
 
 我们可以给函数添加说明文档，辅助理解函数的作用。
 
-```py
+```python
 def func(x,y):
     """
     函数说明
@@ -573,7 +573,7 @@ def func(x,y):
 
 所谓函数嵌套调用指的是一个函数里面又调用了另外一个函数
 
-```py
+```python
 def func_b():
     print("b")
 
@@ -590,7 +590,7 @@ func_a()
 
 所谓局部变量是定义在函数体内部的变量，即只在函数体内部生效
 
-```py
+```python
 def testA():
     num = 100
     print(num)
@@ -603,7 +603,7 @@ print(num)
 
 语法
 
-```py
+```python
 def func():
     return 1,2
 x,y = func()
@@ -620,7 +620,7 @@ x,y = func()
 
 - 调用函数时根据函数定义的参数位置来传递参数
 
-```py
+```python
 def user _info(name,age,gender):
     print(f"名字:{name},年龄:{age},性别:{gender}")
 user_info("TOM",20,"男")
@@ -636,7 +636,7 @@ user_info("TOM",20,"男")
 
 - 函数调用时通过"键=值"形式传递参数
 
-```py
+```python
 def user _info(name,age,gender):
     print(f"名字:{name},年龄:{age},性别:{gender}")
 user_info(name="TOM",age=20,gender="男")
@@ -652,7 +652,7 @@ user_info(name="TOM",age=20,gender="男")
 
 - 缺省参数也叫默认参数，用于定义函数，为参数提供默认值，调用函数时可不传该默认参数的值（注意:所有位置参数必须出现在默认参数前，包括函数定义和调用)
 
-```py
+```python
 def user _info(name,age,gender="男"):
     print(f"名字:{name},年龄:{age},性别:{gender}")
 user_info("TOM",20)
@@ -664,7 +664,7 @@ user_info("TOM",20)
 
 - 不定长参数也叫可变参数.用于不确定调用的时候会传递多少个参数(不传参也可以)的场景
 
-```py
+```python
 def user_info(*args):
     print(args)
 user_info("TOM")
@@ -675,7 +675,7 @@ user_info("TOM",18)
 
 - 传进的所有参数都会被args变量收集，它会根据传进参数的位置合并为一个元组(tuple)，args是元组类型，这就是位置传递
 
-```py
+```python
 def user_info(**kwargs):
     print(kwargs)
 user_info(name="TOM",age=18,id=110)
@@ -687,7 +687,7 @@ user_info(name="TOM",age=18,id=110)
 
 #### 11.9 函数作为参数传递
 
-```py
+```python
 def test_func(compute):
     # compute函数作为函数参数传递
     result = compute(1,2)
@@ -716,7 +716,7 @@ def compute(x,y):
 - 传入参数表示匿名函数的形式参数，如:x, y表示接收2个形式参数
 - 函数体，就是函数的执行逻辑，要注意:只能写一行，无法写多行代码
 
-```py
+```python
 def test_func(compute):
   result = compute(1,2)
   print(f"result:{result}")
@@ -736,7 +736,7 @@ test_func(lambda x,y:x+y)
 
 语法
 
-```py
+```python
 # 字面量
 [元素1,元素2,元素3,...]
 
@@ -798,7 +798,7 @@ test_func(lambda x,y:x+y)
 
 既然数据容器可以存储多个元素，那么，就会有需求从容器内依次取出元素进行操作。将容器内的元素依次取出进行处理的行为，称之为:**遍历**、**迭代**。
 
-```py
+```python
 index  = 0
 while index < len(列表):
     元素 = 列表[index]
@@ -806,7 +806,7 @@ while index < len(列表):
     index += 1
 ```
 
-```py
+```python
 for x in 列表:
     对元素进行处理
 ```
@@ -815,7 +815,7 @@ for x in 列表:
 
 语法
 
-```py
+```python
 a = [[0 for _ in range(2)] for _ in range(3)]
 ```
 
@@ -840,7 +840,7 @@ a = [[0 for _ in range(2)] for _ in range(3)]
 
 元组定义:定义元组使用小括号，且使用逗号隔开各个数据，数据可以是不同的数据类型。
 
-```py
+```python
 # 字面量
 (元素1,元素2,元素3,...)
 # 定义元组变量
@@ -910,7 +910,7 @@ a = [[0 for _ in range(2)] for _ in range(3)]
 
 语法
 
-```py
+```python
 # 字面量
 {元素1,元素2,元素3,...}
 # 定义集合变量
@@ -936,7 +936,7 @@ a = [[0 for _ in range(2)] for _ in range(3)]
 
 语法
 
-```py
+```python
 for element in 集合:
     对element的操作
 ```
@@ -945,7 +945,7 @@ for element in 集合:
 
 字典即**键值对**
 
-```py
+```python
 # 字面量
 {key:value,key:value,key:value,...}
 # 定义字典变量
@@ -969,7 +969,7 @@ for element in 集合:
 
 语法
 
-```py
+```python
 for key in 字典:
     print(f"key:{key};value:{字典[key]}")
 ```
@@ -978,7 +978,7 @@ for key in 字典:
 
 #### 7.1 遍历
 
-```py
+```python
 for x in 数据容器:
     对x的操作
 ```
@@ -1038,7 +1038,7 @@ for x in 数据容器:
 
 `read()`方法
 
-```py
+```python
 文件对象.read(num)
 ```
 
@@ -1046,7 +1046,7 @@ num表示要从文件中读取的数据的长度（单位是字节)，如果没�
 
 `readlines()`方法
 
-```py
+```python
 f = open('python.txt')
 content = f.readlines()
 
@@ -1075,7 +1075,7 @@ f.close()
 
 with open语法
 
-```py
+```python
 with open("python.txt", "r") as f:
 	f.readlines()
 ```
@@ -1087,7 +1087,7 @@ with open("python.txt", "r") as f:
 
 `w`模式写文件
 
-```py
+```python
 #1.打开文件
 f = open('python.txt' , 'w')
 #2.文件写入
@@ -1104,7 +1104,7 @@ f.flush()
 
 `a`模式写文件
 
-```py
+```python
 #1.打开文件，通过a模式打开即可
 f = open('python.txt','a')
 #2.文件写入
@@ -1129,7 +1129,7 @@ f.flush()
 
 基本捕获语法
 
-```py
+```python
 try:
     f = open("D:/abc.txt","r",encoding="UTF-8")
 except:
@@ -1139,7 +1139,7 @@ except:
 
 捕获指定异常
 
-```py
+```python
 try:
     print(name)
 except NameError as e:
@@ -1151,7 +1151,7 @@ except NameError as e:
 
 - 当捕获多个异常时，可以把要捕获的异常类型的名字，放到except后，并使用元组的方式进行书写。
 
-```py
+```python
 try:
 	print(1/0)
 except (NameError,ZeroDivisionError) as e:
@@ -1160,7 +1160,7 @@ except (NameError,ZeroDivisionError) as e:
 
 捕获全部异常
 
-```py
+```python
 try:
     f = open("D:/abc.txt","r")
 except Exception as e:
@@ -1171,7 +1171,7 @@ except Exception as e:
 
 - else表示的是如果没有异常要执行的代码。
 
-```py
+```python
 try:
 	print(1)
 except Exception as e:
@@ -1184,7 +1184,7 @@ else:
 
 - finally表示的是无论是否异常都要执行的代码，例如关闭文件。
 
-```py
+```python
 try:
 	f = open('test.txt' , 'r')
 except Exception as e:
@@ -1199,7 +1199,7 @@ finally:
 
 - 异常是具有传递性的
 
-```py
+```python
 def func01():
     print("func01")
     num = 1/0
@@ -1261,7 +1261,7 @@ Python模块(Module)，是一个 Python 文件，以.py结尾． 模块能定义
 
 要使导入时不调用函数可以使用`__main__`变量限制
 
-```py
+```python
 def test(a,b):
     print(a+b)
     
@@ -1273,7 +1273,7 @@ if __name__ == "__main__":
 
 如果一个模块文件中有`_all_`变量，当使用`from xxx import *`导入时，只能导入这个列表中的元素
 
-```py
+```python
 __all__ = ['test_A']
 
 def test_A():
@@ -1339,7 +1339,7 @@ python包目录
 
 字典向JSON的转换
 
-```py
+```python
 import json
 # 字典向JSON的转换
 data = [{"name":"张大山","age":11},{"name":"李小花","age":12},{"name":"王大锤","age":13}]
@@ -1367,7 +1367,7 @@ https://gallery.pyecharts.org/#/README
 
  折线图
 
-```py
+```python
 import json
 from pyecharts.charts import Line
 from pyecharts.options import TitleOpts, LabelOpts
@@ -1446,7 +1446,7 @@ f_in.close
 
 **定义语法：**
 
-```py
+```python
 class 类名称:
     类的属性
     
@@ -1455,13 +1455,13 @@ class 类名称:
 
 **创建语法：**
 
-```py
+```python
 对象 = 类名称()
 ```
 
 **类的基本操作**
 
-```py
+```python
 # 设计一个类
 class Student:
       name = None          # 记录学生姓名
@@ -1499,7 +1499,7 @@ print(stu_1.age)
 
 在类中国定义成员方法和定义函数基本一致，但有细微区别
 
-```py
+```python
 def 方法名(self, 形参1,....,形参N):
     方法体
 ```
@@ -1538,7 +1538,7 @@ a-->g("...")
 
 `__str__`方法控制对象返回字符串
 
-```py
+```python
 # 创建一个对象
 stu_1 = Student()
 
@@ -1550,7 +1550,7 @@ print(stu_1)
 <__main__.Student object at 0x000001CD59D74490>
 ```
 
-```py
+```python
 # 设计一个类
 class Student:
       name = None          # 记录学生姓名
@@ -1576,21 +1576,21 @@ print(stu_1)
 
 `__lt__`方法实现对两个对象的小于/大于符号的比较
 
-```py
+```python
 def __lt__(self,other):
             return self.age < other.age
 ```
 
 `__le__`方法实现对两个对象的小于等于/大于等于符号的比较
 
-```py
+```python
 def __le__(self,other):
             return self.age <= other.age
 ```
 
 `__eq__`方法对两个对象`==`符号的比较
 
-```py
+```python
 def __eq__(self,other):
             return self.age == other.age
 ```
@@ -1617,7 +1617,7 @@ def __eq__(self,other):
 
 **私有成员无法被类对象使用，但是可以被其它的成员使用。**
 
-```py
+```python
 class Phone:
       __current_voltage = None      #手机运行电压
 
@@ -1638,7 +1638,7 @@ phone = Phone()
 
 语法
 
-```py
+```python
 # 单继承
 class 类名(父类名):
 	类内容
@@ -1653,7 +1653,7 @@ class 类名(父类1, 父类2, ..., 父类N):
 
 占位语句,保证类或者方法定义的完整性,表示空,无内容的意思
 
-```py
+```python
 class 类名():
     pass
 ```
@@ -1704,7 +1704,7 @@ Python在3.5版本的时候引入了类型注解，以方便静态类型检查�
 
 `#type: 类型`
 
-```python
+```pythonthon
 var_1 = 10  # type: int
 ```
 
@@ -1716,14 +1716,14 @@ var_1 = 10  # type: int
 
 形参注解
 
-```py
+```python
 def 函数名(形参1: 类型, 形参2: 类型, ...,形参N: 类型):
     pass
 ```
 
 返回值注解
 
-```py
+```python
 def func(a: int, b: int)->int:
     return a+b
 ```
@@ -1734,7 +1734,7 @@ def func(a: int, b: int)->int:
 
 可以定义联合类型注解
 
-```py 
+```python 
 from typing import Union
 
 my_dict: dict[str, Union[str, int]] = {"name": "周杰伦", "age": 31}
@@ -1744,7 +1744,7 @@ my_dict: dict[str, Union[str, int]] = {"name": "周杰伦", "age": 31}
 
 多态，指的是:多种状态，即完成某个行为时，使用不同的对象会得到不同的状态。
 
-```py
+```python
 class Animal():
     def speak(self):
         pass
@@ -1792,7 +1792,7 @@ animal_speak(cat)
 协程(Coroutine) ，也可以被称为微线程，是一种用户态内的上下文切换技术。
 简而言之，其实就是**通过一个线程实现代码块相互切换执行**。例如︰
 
-```py
+```python
 def func1():
     print(1)
     ...
@@ -1818,7 +1818,7 @@ func2()
 pip3 install greenlet
 ```
 
-```py
+```python
 from greenlet import greenlet
 def func1():
   print(1)          # 2. 输出1
@@ -1839,7 +1839,7 @@ gr1.switch()          # 1. 切换到func1函数
 
 #### 1.2 yield关键字
 
-```py
+```python
 def func1():
   yield 1
   yield from func2
@@ -1858,7 +1858,7 @@ for item in f1:
 
 python 3.4 以后版本
 
-```py
+```python
 import asyncio
 
 @asyncio.coroutine
@@ -1888,7 +1888,7 @@ loop.run_until_complete(asyncio.wait(tasks))
 
 python 3.5以后版本
 
-```py
+```python
 ```
 
 #### 1.5. 协程的意义
@@ -1901,7 +1901,7 @@ python 3.5以后版本
 
 理解成为一个死循环，去检测并执行某些代码。
 
-```py
+```python
 #伪代码
 
 任务列表=[任务1，任务2，任务3，...]
@@ -1916,7 +1916,7 @@ while True :
 	如果任务列表中的任务都已完成，则终止循环
 ```
 
-```py
+```python
 import asyncio
 
 # 去生成或获取一个事件循环
@@ -1938,7 +1938,7 @@ loop.run_until_complete(任务)
 
 协程对象，执行协程函数得到的协程对象
 
-```py
+```python
 async def func():
     pass
 
@@ -1949,7 +1949,7 @@ result = func()
 
 如个想要运行协程函数内部代码，必须要将协程对象交给事件循环来处理
 
-```py
+```python
 import asyncio
 
 async def func():
@@ -1970,7 +1970,7 @@ await + 可等待的对象（协程对象、Future对象、Task 对象 => IO等�
 
 示例一：
 
-```py
+```python
 import asyncio
 
 async def func():
@@ -1983,7 +1983,7 @@ asyncio.run(func())
 
 示例二：
 
-```py
+```python
 import asyncio
 
 async def others():
@@ -2024,7 +2024,7 @@ Tasks用于并发调度协程，通过 `asyncio.create_task(协程对象)`的方
 
 示例一：
 
-```py
+```python
 import asyncio
 
 async def func():
@@ -2054,7 +2054,7 @@ asyncio.run(main())
 
 示例二：
 
-```py
+```python
 import asyncio
 
 async def func():
@@ -2086,7 +2086,7 @@ asyncio.run(main())
 
 示例三：
 
-```py
+```python
 import asyncio
 
 async def func():
@@ -2115,7 +2115,7 @@ Task继承Future，Task对象内部await结果的处理基于Future对象来的
 
 示例一：
 
-```py
+```python
 async def main():
     # 获取当前事件循环
     loop asyncio.get_rumning_loop()
@@ -2131,7 +2131,7 @@ asyncio.run(main())
 
 示例二：
 
-```py
+```python
 import asyncio
 
 async def set_after(fut):
@@ -2160,7 +2160,7 @@ asyncio.run(main())
 
 使用线程池、进程池实现异步操作时用到的对象。
 
-```py
+```python
 import time 
 from concurrent.futures import Future
 from concurrent.futures.thread import ThreadPoolExecutor
@@ -2195,7 +2195,7 @@ for i in range(10):
 
 > 可在 `async for` 语句中被使用的对象。必须通过它的`__aiter__`方法返回一个`asynchronous iterator`。由PEP 492引入。
 
-```py
+```python
 import asyncio
 
 
@@ -2233,7 +2233,7 @@ asyncio.run(func())
 
 此种对象通过定义`__aenter__()`和`__aexit__()`方法来对`async with`语句中的环境进行控制，由PEP 492引入
 
-```py
+```python
 import asyncio
 
 
@@ -2270,7 +2270,7 @@ uvloop 是 asyncio 的事件循环的替代方案。事件循环的效率大于�
 pip3 install uvloop
 ```
 
-```py
+```python
 import asyncio
 import uvloop
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
@@ -2291,7 +2291,7 @@ asyncio.run(...)
 pip install aiohttp
 ```
 
-```py
+```python
 from enum import verify
 import aiohttp
 import asyncio

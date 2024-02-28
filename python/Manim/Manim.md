@@ -91,7 +91,7 @@ manim/
 
 新建start.py文件，写入以下代码
 
-```py
+```python
 from manimlib import *
 
 class SquareToCircle(Scene):
@@ -115,7 +115,7 @@ manimgl start.py SquareToCircle
 
 修改代码如下
 
-```py
+```python
 from manimlib import *
 
 class SquareToCircle(Scene):
@@ -137,7 +137,7 @@ class SquareToCircle(Scene):
 
 **manimgl新版本支持交互新特性（在pip工具安装的manimlib中没有此特性，故运行时会报错）**，在上面代码末尾加上如下代码启用交互
 
-```py
+```python
 self.embed()
 ```
 
@@ -149,7 +149,7 @@ self.embed()
 
 此时在终端可以输入代码，逐行运行
 
-```py
+```python
 # 在水平方向上拉伸到四倍
 play(circle.animate.stretch(4, dim=0))
 # 旋转90°

@@ -16,7 +16,7 @@ python -m pip install flask
 
 安装完成后，使用下面代码查看是否正确安装
 
-```py
+```python
 import flask
 
 print(flask.__version__)
@@ -32,7 +32,7 @@ print(flask.__version__)
 
 1. 创建文件`app.py`，编写代码
 
-```py
+```python
 from flask import Flask
 
 app = Flask(__name__)
@@ -57,7 +57,7 @@ flask run
 1. 创建`templates`文件夹，创建`index.html`文件，写一个简单的网页
 2. 导入`render_template`，编写代码
 
-```py
+```python
 from flask import Flask,render_template
 
 app = Flask(__name__)
