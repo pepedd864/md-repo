@@ -175,16 +175,16 @@
 
 ### 数学推理符号
 
-| 符号                                   | 表示                              | 示例                 |
-| -------------------------------------- | --------------------------------- | -------------------- |
-| $\implies$ 或 $\Rightarrow$            | 蕴含符号 "implies"                | $p\implies q$        |
-| $\iff$ 或 $\Leftrightarrow$            | 双向蕴含符号 "if and only if"     | $p\iff q$            |
-| $\neg$ 或 $\sim$                       | 否定符号 "not"                    | $\neg p$             |
-| $\exists$                              | 存在符号 "there exists"           | $\exists x$          |
-| $\forall$                              | 全称符号 "for all"                | $\forall x$          |
-| $\land$ 或 $\wedge$                    | 逻辑与符号 "and"                  | $p\land q$           |
-| $\lor$ 或 $\vee$                       | 逻辑或符号 "or"                   | $p\lor q$            |
-| $\rightarrow$ 或 $\to$                 | 逻辑蕴含符号 "implies"            | $p\rightarrow q$     |
+| 符号                                    | 表示                        | 示例                   |
+| ------------------------------------- | ------------------------- | -------------------- |
+| $\implies$ 或 $\Rightarrow$            | 蕴含符号 "implies"            | $p\implies q$        |
+| $\iff$ 或 $\Leftrightarrow$            | 双向蕴含符号 "if and only if"   | $p\iff q$            |
+| $\neg$ 或 $\sim$                       | 否定符号 "not"                | $\neg p$             |
+| $\exists$                             | 存在符号 "there exists"       | $\exists x$          |
+| $\forall$                             | 全称符号 "for all"            | $\forall x$          |
+| $\land$ 或 $\wedge$                    | 逻辑与符号 "and"               | $p\land q$           |
+| $\lor$ 或 $\vee$                       | 逻辑或符号 "or"                | $p\lor q$            |
+| $\rightarrow$ 或 $\to$                 | 逻辑蕴含符号 "implies"          | $p\rightarrow q$     |
 | $\leftrightarrow$ 或 $\leftrightarrow$ | 逻辑双向蕴含符号 "if and only if" | $p\leftrightarrow q$ |
 
 
