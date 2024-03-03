@@ -44,5 +44,16 @@
 
 ![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/b41e1e9fef2d29b91a00d48ffbeda2a7.png)
 
-> 
+> 当然还有 obsidian 的特色关系图谱，不过我不太需要，所以没有过多配置
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/6127a8a35d8930e1b0cd135313a23017.png)
+
+
+
+> 其他的诸如更好的字数统计，文件统计之类的(Better word count)，就不过多介绍了，根据个人喜好配置
+
+![](https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/b88364563fd6daa08a514c85bb2d2c9a.png)
+
+
+# 1. 安装 obsidian 
 
